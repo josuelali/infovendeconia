@@ -1,0 +1,22 @@
+{
+  "name": "InfoVendeConIA",
+  "short_name": "InfoVendeConIA",
+  "start_url": "/?source=pwa",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f4f6fb",
+  "theme_color": "#0b1220",
+  "description": "Web informativa sobre inteligencia artificial explicada con lenguaje simple, ejemplos y pasos prácticos.",
+  "icons": [
+    {
+      "src": "/assets/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
