@@ -170,3 +170,89 @@ footer{
   margin-top:10px;
   font-weight:700
 }
+
+/* =========================
+   BLOQUE HERRAMIENTAS IA / SAAS
+========================= */
+
+.ia-tools-box{
+
+margin:40px 0;
+padding:26px;
+
+background:linear-gradient(135deg,#020617,#0b1220);
+
+border:1px solid rgba(56,189,248,.35);
+border-radius:16px;
+
+box-shadow:0 0 25px rgba(0,198,255,.25);
+
+}
+
+.ia-tools-box h3{
+
+margin-top:0;
+color:var(--neon-blue);
+font-size:20px;
+
+}
+
+.ia-tools-box p{
+
+color:#cbd5f5;
+
+}
+
+.ia-tools-box ul{
+
+margin:18px 0;
+padding-left:20px;
+
+}
+
+.ia-tools-box li{
+
+margin-bottom:10px;
+
+}
+
+.ia-tools-box a{
+
+color:var(--neon-blue);
+font-weight:700;
+
+}
+
+.ia-tools-box a:hover{
+
+text-decoration:underline;
+
+}
+
+/* Botón principal SaaS */
+
+.cta-saas{
+
+display:inline-block;
+margin-top:14px;
+
+padding:12px 22px;
+
+background:linear-gradient(135deg,var(--neon-purple),var(--neon-blue));
+
+color:#fff;
+
+font-weight:800;
+
+border-radius:10px;
+
+box-shadow:0 0 18px rgba(0,198,255,.45);
+
+}
+
+.cta-saas:hover{
+
+opacity:.9;
+text-decoration:none;
+
+}
