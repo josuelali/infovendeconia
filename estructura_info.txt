@@ -1,0 +1,302 @@
+Listado de rutas de carpetas
+El número de serie del volumen es A6CD-2E19
+C:.
+│   ads.txt
+│   app.html
+│   aviso-legal.html
+│   como-ganar-dinero-con-ia.html
+│   contacto.html
+│   cookies.html
+│   estructura_info.txt
+│   index.html
+│   manifest.json
+│   offline.html
+│   privacidad.html
+│   robots.txt
+│   sitemap.xml
+│   sobre-nosotros.html
+│   style.css
+│   sw.js
+│
+├───guias
+│   │   analisis-predictivo-con-ia.html
+│   │   aplicaciones-de-ia-en-educacion.html
+│   │   aplicaciones-de-la-vision-por-computadora.html
+│   │   aprendizaje-automatico-vs-aprendizaje-profundido-diferencias.html
+│   │   automatizacion-de-procesos-con-ia.html
+│   │   automatizar-ingresos-online.html
+│   │   automatizar-tareas-repetitivas.html
+│   │   automatizar-ventas.txt
+│   │   chatbots-beneficios-y-como-implementarlos.html
+│   │   chatgpt-para-emprendedores.txt
+│   │   como-aprender-sobre-ia-recursos-y-cursos-recomendados.html
+│   │   como-aprovechar-la-ia-en-el-teletrabajo.html
+│   │   como-crear-contenido-con-ia-texto-imagen-y-video-sin-liarte.html
+│   │   como-detectar-informacion-falsa-o-inventada-por-ia.html
+│   │   como-escribir-prompts-que-funcionan-formula-simple-con-ejemplos.html
+│   │   como-estudiar-con-ia-sin-copiar-metodo-practico.html
+│   │   como-integrar-ia-en-proyectos-de-automatizacion.html
+│   │   como-la-ia-ayuda-a-la-productividad-personal.html
+│   │   como-la-inteligencia-artificial-esta-transformando-el-marketing-digital.html
+│   │   como-organizar-proyectos-con-ia.html
+│   │   como-usar-chatgpt-paso-a-paso-guia-para-principiantes.html
+│   │   como-usar-ia-para-resumir-textos-largos.html
+│   │   como-utilizar-la-ia-para-analizar-datos-de-clientes.html
+│   │   crear-negocio-online-con-ia.html
+│   │   errores-comunes-al-usar-ia-y-como-evitarlos-sin-complicarte.html
+│   │   errores-frecuentes-al-empezar-con-ia.html
+│   │   gadgets-tecnologicos-2026.txt
+│   │   ganar-dinero-con-chatgpt.html
+│   │   generacion-de-contenido-con-ia-que-debes-saber.html
+│   │   herramientas-de-ia-para-emprendedores.html
+│   │   herramientas-de-ia-para-pequenas-empresas.html
+│   │   herramientas-de-ia-para-principiantes-que-elegir-segun-tu-objetivo.html
+│   │   ia-en-ecommerce.html
+│   │   ia-en-educacion-ventajas-y-limites.html
+│   │   ia-en-la-atencion-al-cliente.html
+│   │   ia-en-la-educacion-como-mejorar-el-aprendizaje.html
+│   │   ia-en-la-salud-avances-y-retos.html
+│   │   ia-para-ahorrar-tiempo-12-tareas-que-puedes-automatizar-hoy.html
+│   │   ia-para-analisis-de-informacion.html
+│   │   ia-para-analisis-de-mercado.html
+│   │   ia-para-principiantes-guia-completa.html
+│   │   ia-y-ciberseguridad.html
+│   │   ia-y-creatividad-musica-arte-y-diseno.html
+│   │   ia-y-etica-consideraciones-importantes.html
+│   │   ia-y-privacidad-de-datos.html
+│   │   ia-y-productividad-personal.html
+│   │   ia-y-seguridad-cibernetica-protege-tus-datos.html
+│   │   index.html
+│   │   ingresos-pasivos-con-inteligencia-artificial.html
+│   │   inteligencia-artificial-etica-y-responsable.html
+│   │   modelos-de-lenguaje-chatgpt-y-mas.html
+│   │   negocios-con-inteligencia-artificial.html
+│   │   que-es-la-inteligencia-artificial-y-para-que-sirve-explicado-facil.html
+│   │   tendencias-en-ia-para-2026.html
+│   │   uso-de-la-ia-para-seo.html
+│   │   utilizando-modelos-de-lenguaje-avanzados-como-gpt-4.html
+│   │   ventajas-y-riesgos-de-la-ia-en-los-negocios.html
+│   │
+│   ├───automatizar-embudos-venta
+│   │       index.html
+│   │
+│   ├───automatizar-ingresos-online
+│   │       index.html
+│   │
+│   ├───automatizar-negocio-digital
+│   │       index.html
+│   │
+│   ├───automatizar-negocio-online
+│   │       index.html
+│   │
+│   ├───automatizar-tareas-repetitivas
+│   │       index.html
+│   │
+│   ├───como-crear-agentes-de-ia
+│   │       index.html
+│   │
+│   ├───como-generar-ingresos-con-ia
+│   │       index.html
+│   │
+│   ├───como-usar-chatgpt
+│   │   │   index.html
+│   │   │
+│   │   └───crear-negocio-online-con-ia
+│   │           index.html
+│   │
+│   ├───crear-asistentes-ia-personalizados
+│   │       index.html
+│   │
+│   ├───crear-contenido-automatico-con-ia
+│   │       index.html
+│   │
+│   ├───crear-guiones-con-ia
+│   │       index.html
+│   │
+│   ├───crear-ingresos-online-con-ia
+│   │       index.html
+│   │
+│   ├───crear-negocio-online-con-inteligencia-artificial
+│   │       index.html
+│   │
+│   ├───crear-nichos-web-con-ia
+│   │       index.html
+│   │
+│   ├───crear-proyecto-online-con-inteligencia-artificial
+│   │       index.html
+│   │
+│   ├───crear-videos-automaticos-con-inteligencia-artificial
+│   │       index.html
+│   │
+│   ├───crear-webs-de-nicho-con-inteligencia-artificial
+│   │       index.html
+│   │
+│   ├───crear-webs-monetizadas-con-afiliados
+│   │       index.html
+│   │
+│   ├───crecer-en-redes-sociales-con-ia
+│   │       index.html
+│   │
+│   ├───formas-de-ganar-dinero-con-inteligencia-artificial
+│   │       index.html
+│   │
+│   ├───gadgets-tecnologicos-amazon
+│   │       index.html
+│   │
+│   ├───ganar-dinero-con-automatizacion
+│   │       index.html
+│   │
+│   ├───ganar-dinero-con-chatgpt
+│   │       index.html
+│   │
+│   ├───ganar-dinero-con-herramientas-ia
+│   │       index.html
+│   │
+│   ├───ganar-dinero-con-ia-desde-casa
+│   │       index.html
+│   │
+│   ├───ganar-dinero-con-inteligencia-artificial
+│   │       index.html
+│   │
+│   ├───generar-contenido-con-ia
+│   │       index.html
+│   │
+│   ├───generar-trafico-con-ia
+│   │       index.html
+│   │
+│   ├───herramientas-ia-para-emprendedores
+│   │       index.html
+│   │
+│   ├───herramientas-ia-para-productividad
+│   │       index.html
+│   │
+│   ├───ia-para-emprendedores
+│   │       index.html
+│   │
+│   ├───ideas-de-negocio-con-inteligencia-artificial
+│   │       index.html
+│   │
+│   ├───ingresos-pasivos-con-inteligencia-artificial
+│   │       index.html
+│   │
+│   ├───mejores-herramientas-de-automatizacion
+│   │       index.html
+│   │
+│   ├───mejores-herramientas-de-inteligencia-artificial
+│   │       index.html
+│   │
+│   ├───mejores-herramientas-ia-2026
+│   │       index.html
+│   │
+│   ├───modelos-de-negocio-con-ia
+│   │       index.html
+│   │
+│   ├───monetizar-proyectos-con-ia
+│   │       index.html
+│   │
+│   ├───negocios-con-inteligencia-artificial
+│   │       index.html
+│   │
+│   ├───negocios-digitales-con-inteligencia-artificial
+│   │       index.html
+│   │
+│   ├───negocios-rentables-con-inteligencia-artificial
+│   │       index.html
+│   │
+│   ├───plataforma-de-asistentes-ia
+│   │       index.html
+│   │
+│   ├───plataforma-de-automatizacion-con-ia
+│   │       index.html
+│   │
+│   ├───plataformas-ia-para-negocios-online
+│   │       index.html
+│   │
+│   ├───plataformas-para-crear-agentes-de-ia
+│   │       index.html
+│   │
+│   ├───que-son-los-agentes-de-inteligencia-artificial
+│   │       index.html
+│   │
+│   ├───seo-automatico-con-inteligencia-artificial
+│   │       index.html
+│   │
+│   ├───software-de-automatizacion-con-inteligencia-artificial
+│   │       index.html
+│   │
+│   ├───software-para-crear-agentes-ia
+│   │       index.html
+│   │
+│   ├───trabajar-online-con-inteligencia-artificial
+│   │       index.html
+│   │
+│   ├───usar-ia-para-ganar-dinero-online
+│   │       index.html
+│   │
+│   └───webs-automaticas-para-afiliados
+│           index.html
+│
+├───img
+│       apple-touch-icon.png
+│       autologo.png
+│       favicon-96x96.png
+│       favicon.png
+│       ico-192.png
+│       ico-512.png
+│       infologo.png
+│       logo-gadgetsmania.png
+│       logosistem-512.png
+│
+└───negocios
+    │   automatizacion-sencilla-con-ia.html
+    │   chatbots-para-servicio-al-cliente-que-necesitas-saber.html
+    │   como-organizar-tu-semana-con-ia-planificacion-simple.html
+    │   como-usar-ia-para-escribir-emails-profesionales-en-minutos.html
+    │   como-validar-una-idea-de-negocio-con-ia-pasos-y-ejemplos.html
+    │   ia-en-atencion-al-cliente-respuestas-rapidas-y-mejor-experiencia.html
+    │   ia-en-finanzas-gestiona-tus-inversiones-inteligentemente.html
+    │   ia-en-la-logistica-optimizando-la-cadena-de-suministro.html
+    │   ia-en-marketing-ideas-claras-para-vender-mas-sin-promesas.html
+    │   ia-en-pequenas-empresas.html
+    │   ia-en-recursos-humanos-como-mejorar-el-reclutamiento.html
+    │   ia-para-atencion-al-cliente-basica.html
+    │   ia-para-autonomos-como-aplicarla-en-un-negocio-pequeno.html
+    │   ia-para-crear-ideas-de-contenido.html
+    │   ia-para-e-commerce-mejora-las-ventas-con-recomendaciones.html
+    │   index.html
+    │   robotica-y-automatizacion-para-empresas-pequenas.html
+    │   transformacion-digital-con-ia-para-negocios-tradicionales.html
+    │   utilizar-ia-para-analizar-la-competencia.html
+    │
+    ├───como-usar-chatgpt
+    │       index.html
+    │
+    ├───crear-arquitectura-de-agentes-ia
+    │       index.html
+    │
+    ├───crear-articulos-seo-con-ia
+    │       index.html
+    │
+    ├───crear-blogs-automaticos-con-ia
+    │       index.html
+    │
+    ├───crear-ingresos-pasivos-con-inteligencia-artificial
+    │       index.html
+    │
+    ├───crear-sistemas-automaticos-con-ia
+    │       index.html
+    │
+    ├───herramientas-de-inteligencia-artificial-para-empresas
+    │       index.html
+    │
+    ├───ingresos-automaticos-con-ia
+    │       index.html
+    │
+    ├───mejores-webcams-para-trabajar-desde-casa
+    │       index.html
+    │
+    ├───software-ia-para-generar-contenido
+    │       index.html
+    │
+    └───software-para-crear-blogs-automaticos
+            index.html

@@ -1,0 +1,790 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>InfoVendeConIA | Guías premium de negocio e IA</title>
+  <meta name="description" content="Guías, herramientas y sistemas para crear negocios digitales, automatizar procesos y monetizar con inteligencia artificial.">
+  <link rel="icon" type="image/png" href="img/logo-infovendeconia.png">
+
+  <style>
+    :root{
+      --bg:#061418;
+      --bg-2:#0b1d23;
+      --panel:#0e2229;
+      --panel-2:#102931;
+      --line:rgba(255,255,255,.08);
+      --text:#eef7f2;
+      --muted:#bdd1c8;
+      --green:#19c37d;
+      --green-2:#4de0a2;
+      --amber:#e6b85c;
+      --amber-2:#f3cd7b;
+      --shadow:0 18px 55px rgba(0,0,0,.35);
+      --max:1240px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(circle at 10% 10%, rgba(25,195,125,.12), transparent 22%),
+        radial-gradient(circle at 85% 12%, rgba(230,184,92,.10), transparent 22%),
+        linear-gradient(135deg, #061418 0%, #071920 38%, #0b2027 100%);
+      line-height:1.7;
+    }
+
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;height:auto;display:block}
+
+    .site-header{
+      position:sticky;
+      top:0;
+      z-index:100;
+      backdrop-filter:blur(10px);
+      background:rgba(6,20,24,.78);
+      border-bottom:1px solid var(--line);
+    }
+
+    .header-shell{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:16px 24px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+    }
+
+    .logo-link{
+      display:flex;
+      align-items:center;
+      gap:14px;
+      min-width:0;
+    }
+
+    .site-logo{
+      width:58px;
+      height:58px;
+      object-fit:cover;
+      border-radius:16px;
+      border:1px solid rgba(255,255,255,.08);
+      box-shadow:var(--shadow);
+      flex:0 0 auto;
+      background:rgba(255,255,255,.03);
+    }
+
+    .logo-text{
+      display:flex;
+      flex-direction:column;
+      line-height:1.05;
+      min-width:0;
+    }
+
+    .logo-text strong{
+      font-size:1.15rem;
+      color:var(--text);
+    }
+
+    .logo-text span{
+      font-size:.84rem;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    .main-nav{
+      display:flex;
+      align-items:center;
+      gap:14px;
+      flex-wrap:wrap;
+    }
+
+    .main-nav a{
+      color:var(--muted);
+      font-weight:700;
+      font-size:.96rem;
+      transition:.2s ease;
+    }
+
+    .main-nav a:hover{color:var(--text)}
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      min-height:48px;
+      padding:0 18px;
+      border-radius:14px;
+      border:1px solid transparent;
+      font-weight:800;
+      font-size:.96rem;
+      transition:transform .2s ease, box-shadow .2s ease, background .2s ease, border-color .2s ease;
+    }
+
+    .btn:hover{transform:translateY(-1px)}
+
+    .btn-primary{
+      background:linear-gradient(135deg, var(--amber), var(--amber-2));
+      color:#1d1607 !important;
+      box-shadow:0 10px 28px rgba(230,184,92,.22);
+    }
+
+    .btn-secondary{
+      background:rgba(255,255,255,.03);
+      border-color:rgba(255,255,255,.08);
+      color:var(--text);
+    }
+
+    .hero{
+      padding:42px 24px 22px;
+    }
+
+    .hero-shell{
+      max-width:var(--max);
+      margin:0 auto;
+      display:grid;
+      grid-template-columns:minmax(0,1.25fr) minmax(320px,.75fr);
+      gap:28px;
+      align-items:stretch;
+    }
+
+    .hero-copy,
+    .hero-card{
+      background:linear-gradient(180deg, rgba(12,31,36,.88), rgba(10,24,29,.92));
+      border:1px solid var(--line);
+      border-radius:30px;
+      box-shadow:var(--shadow);
+    }
+
+    .hero-copy{
+      padding:36px;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .hero-copy::before{
+      content:"";
+      position:absolute;
+      inset:auto auto -80px -70px;
+      width:220px;
+      height:220px;
+      background:radial-gradient(circle, rgba(25,195,125,.18), transparent 68%);
+      pointer-events:none;
+    }
+
+    .hero-copy::after{
+      content:"";
+      position:absolute;
+      top:-60px;
+      right:-40px;
+      width:200px;
+      height:200px;
+      background:radial-gradient(circle, rgba(230,184,92,.12), transparent 68%);
+      pointer-events:none;
+    }
+
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      margin:0 0 16px;
+      padding:8px 12px;
+      border-radius:999px;
+      background:rgba(25,195,125,.10);
+      color:var(--green-2);
+      border:1px solid rgba(25,195,125,.18);
+      font-size:.78rem;
+      font-weight:900;
+      text-transform:uppercase;
+      letter-spacing:.08em;
+      position:relative;
+      z-index:1;
+    }
+
+    .hero h1{
+      margin:0 0 16px;
+      font-size:clamp(2.5rem, 5vw, 5rem);
+      line-height:1.02;
+      letter-spacing:-.03em;
+      max-width:12ch;
+      position:relative;
+      z-index:1;
+    }
+
+    .hero-lead{
+      margin:0;
+      max-width:62ch;
+      font-size:1.12rem;
+      color:var(--muted);
+      position:relative;
+      z-index:1;
+    }
+
+    .hero-actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      margin-top:24px;
+      position:relative;
+      z-index:1;
+    }
+
+    .hero-meta{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      margin:22px 0 0;
+      padding:0;
+      list-style:none;
+      position:relative;
+      z-index:1;
+    }
+
+    .hero-meta li{
+      padding:10px 14px;
+      border-radius:999px;
+      background:rgba(255,255,255,.04);
+      border:1px solid rgba(255,255,255,.06);
+      color:var(--text);
+      font-size:.92rem;
+      font-weight:700;
+    }
+
+    .hero-card{
+      padding:28px;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+    }
+
+    .badge{
+      display:inline-flex;
+      width:max-content;
+      margin-bottom:14px;
+      padding:8px 12px;
+      border-radius:999px;
+      font-size:.75rem;
+      font-weight:900;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      color:#1e1908;
+      background:linear-gradient(135deg, var(--amber), var(--amber-2));
+    }
+
+    .hero-card h3{
+      margin:0 0 12px;
+      font-size:1.45rem;
+      line-height:1.15;
+    }
+
+    .hero-card p{
+      margin:0 0 18px;
+      color:var(--muted);
+    }
+
+    .mini-list{
+      display:grid;
+      gap:10px;
+      padding:0;
+      margin:0 0 22px;
+      list-style:none;
+    }
+
+    .mini-list li{
+      padding-left:18px;
+      position:relative;
+      color:var(--text);
+      font-weight:600;
+    }
+
+    .mini-list li::before{
+      content:"";
+      position:absolute;
+      left:0;
+      top:.75em;
+      width:8px;
+      height:8px;
+      border-radius:999px;
+      background:var(--green);
+      box-shadow:0 0 0 6px rgba(25,195,125,.12);
+      transform:translateY(-50%);
+    }
+
+    .section{
+      padding:22px 24px;
+    }
+
+    .section-shell{
+      max-width:var(--max);
+      margin:0 auto;
+    }
+
+    .section-head{
+      margin-bottom:18px;
+    }
+
+    .section-head h2{
+      margin:0 0 8px;
+      font-size:clamp(1.8rem, 3vw, 2.6rem);
+      line-height:1.08;
+      letter-spacing:-.02em;
+    }
+
+    .section-head p{
+      margin:0;
+      color:var(--muted);
+      max-width:62ch;
+    }
+
+    .tools-grid,
+    .guides-grid{
+      display:grid;
+      grid-template-columns:repeat(4,minmax(0,1fr));
+      gap:18px;
+    }
+
+    .card{
+      padding:22px;
+      border-radius:24px;
+      background:linear-gradient(180deg, rgba(12,31,36,.88), rgba(10,24,29,.92));
+      border:1px solid var(--line);
+      box-shadow:var(--shadow);
+    }
+
+    .card h3{
+      margin:0 0 10px;
+      font-size:1.15rem;
+    }
+
+    .card p{
+      margin:0 0 16px;
+      color:var(--muted);
+      font-size:.96rem;
+    }
+
+    .card-icon{
+      width:52px;
+      height:52px;
+      border-radius:16px;
+      display:grid;
+      place-items:center;
+      background:rgba(25,195,125,.10);
+      border:1px solid rgba(25,195,125,.18);
+      color:var(--green-2);
+      font-weight:900;
+      margin-bottom:14px;
+      font-size:1.15rem;
+    }
+
+    .mini-link{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:40px;
+      padding:0 14px;
+      border-radius:12px;
+      font-size:.9rem;
+      font-weight:800;
+      background:rgba(25,195,125,.10);
+      color:var(--green-2);
+      border:1px solid rgba(25,195,125,.18);
+    }
+
+    .carousel-wrap{
+      overflow:hidden;
+      border-radius:24px;
+      border:1px solid var(--line);
+      background:linear-gradient(180deg, rgba(12,31,36,.88), rgba(10,24,29,.92));
+      box-shadow:var(--shadow);
+      padding:18px 0;
+    }
+
+    .carousel-track{
+      display:flex;
+      align-items:center;
+      gap:24px;
+      width:max-content;
+      animation:scroll 28s linear infinite;
+      padding:0 24px;
+    }
+
+    .carousel-item{
+      flex:0 0 auto;
+      width:170px;
+      height:88px;
+      display:grid;
+      place-items:center;
+      border-radius:18px;
+      background:rgba(255,255,255,.03);
+      border:1px solid rgba(255,255,255,.06);
+      padding:12px;
+    }
+
+    .carousel-item img{
+      max-width:100%;
+      max-height:100%;
+      object-fit:contain;
+    }
+
+    @keyframes scroll{
+      from{transform:translateX(0)}
+      to{transform:translateX(-50%)}
+    }
+
+    .cta-master{
+      padding:22px 24px 50px;
+    }
+
+    .cta-box{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:34px;
+      border-radius:28px;
+      border:1px solid rgba(230,184,92,.20);
+      background:linear-gradient(135deg, rgba(25,195,125,.10), rgba(230,184,92,.08));
+      box-shadow:var(--shadow);
+      display:grid;
+      grid-template-columns:minmax(0,1fr) auto;
+      gap:20px;
+      align-items:center;
+    }
+
+    .cta-box h2{
+      margin:0 0 10px;
+      font-size:clamp(1.8rem, 3vw, 2.5rem);
+      line-height:1.08;
+    }
+
+    .cta-box p{
+      margin:0;
+      color:var(--muted);
+      max-width:60ch;
+    }
+
+    .site-footer{
+      border-top:1px solid var(--line);
+      background:rgba(4,14,17,.75);
+      margin-top:10px;
+    }
+
+    .footer-shell{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:28px 24px 38px;
+      display:grid;
+      grid-template-columns:1.2fr .9fr .9fr;
+      gap:24px;
+    }
+
+    .footer-brand p,
+    .footer-col a{
+      color:var(--muted);
+      font-size:.95rem;
+    }
+
+    .footer-brand p{
+      margin:12px 0 0;
+      max-width:34ch;
+    }
+
+    .footer-col{
+      display:grid;
+      gap:10px;
+      align-content:start;
+    }
+
+    .footer-col h3{
+      margin:0 0 10px;
+      font-size:1rem;
+    }
+
+    .footer-col a:hover{color:var(--text)}
+
+    @media (max-width:1100px){
+      .hero-shell,
+      .cta-box,
+      .footer-shell{
+        grid-template-columns:1fr;
+      }
+
+      .tools-grid,
+      .guides-grid{
+        grid-template-columns:repeat(2,minmax(0,1fr));
+      }
+    }
+
+    @media (max-width:720px){
+      .header-shell{
+        padding:14px 16px;
+      }
+
+      .hero,
+      .section,
+      .cta-master{
+        padding-left:16px;
+        padding-right:16px;
+      }
+
+      .main-nav{
+        display:none;
+      }
+
+      .tools-grid,
+      .guides-grid{
+        grid-template-columns:1fr;
+      }
+
+      .hero-copy,
+      .hero-card,
+      .card,
+      .cta-box{
+        padding:22px;
+        border-radius:22px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-shell">
+    <a href="./" class="logo-link" aria-label="InfoVendeConIA">
+      <img src="img/logo-infovendeconia.png" alt="InfoVendeConIA" class="site-logo">
+      <span class="logo-text">
+        <strong>InfoVendeConIA</strong>
+        <span>Guías premium de negocio e IA</span>
+      </span>
+    </a>
+
+    <nav class="main-nav" aria-label="Principal">
+      <a href="./">Inicio</a>
+      <a href="guias/">Guías</a>
+      <a href="guias/como-escribir-prompts-que-funcionan-formula-simple-con-ejemplos/">Prompts</a>
+      <a href="guias/negocios-con-inteligencia-artificial/">Negocio con IA</a>
+      <a href="https://sistemamaestroia.com/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Crear mi sistema IA</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-shell">
+    <div class="hero-copy">
+      <span class="eyebrow">Ecosistema InfoVendeConIA</span>
+      <h1>Crea negocios digitales con inteligencia artificial y automatización</h1>
+      <p class="hero-lead">
+        Guías, herramientas y sistemas para lanzar activos digitales, automatizar procesos,
+        mejorar productividad y monetizar mejor con IA.
+      </p>
+
+      <ul class="hero-meta">
+        <li>Guías premium</li>
+        <li>Herramientas reales</li>
+        <li>Monetización práctica</li>
+      </ul>
+
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="guias/">Ver guías</a>
+        <a class="btn btn-secondary" href="#herramientas">Herramientas IA</a>
+      </div>
+    </div>
+
+    <aside class="hero-card">
+      <div>
+        <span class="badge">Herramienta recomendada</span>
+        <h3>Systeme.io</h3>
+        <p>
+          Plataforma todo en uno para captar leads, crear páginas, formularios,
+          embudos y automatizaciones sin complicarse.
+        </p>
+
+        <ul class="mini-list">
+          <li>Captación y embudos</li>
+          <li>Email marketing automatizado</li>
+          <li>Páginas y formularios</li>
+        </ul>
+      </div>
+
+      <a href="https://systeme.io/es?sa=sa0265622982c7f37465c7b29f0138ab412c445b08"
+         target="_blank"
+         rel="noopener noreferrer nofollow sponsored"
+         class="btn btn-primary">
+        Probar Systeme gratis
+      </a>
+    </aside>
+  </div>
+</section>
+
+<section class="section" id="herramientas">
+  <div class="section-shell">
+    <div class="section-head">
+      <h2>Herramientas IA recomendadas</h2>
+      <p>Una selección útil para crear contenido, montar webs, automatizar captación y mejorar productividad.</p>
+    </div>
+
+    <div class="tools-grid">
+      <div class="card">
+        <div class="card-icon">S</div>
+        <h3>Systeme.io</h3>
+        <p>Embudo, páginas, formularios y automatización de marketing.</p>
+        <a class="mini-link" href="https://systeme.io/es?sa=sa0265622982c7f37465c7b29f0138ab412c445b08" target="_blank" rel="noopener noreferrer nofollow sponsored">Ver herramienta</a>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">H</div>
+        <h3>Hostinger</h3>
+        <p>Hosting, dominios y despliegue rápido para webs y proyectos online.</p>
+        <a class="mini-link" href="https://www.hostinger.com/es?REFERRALCODE=DZOJOSUECS4D" target="_blank" rel="noopener noreferrer nofollow sponsored">Ver hosting</a>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">P</div>
+        <h3>Pictory</h3>
+        <p>Convierte texto, ideas y artículos en vídeos con IA.</p>
+        <a class="mini-link" href="https://pictory.ai?ref=joshue-cabello-rosa72" target="_blank" rel="noopener noreferrer nofollow sponsored">Crear vídeos</a>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">A</div>
+        <h3>Amazon</h3>
+        <p>Recursos físicos, setup y accesorios para productividad y contenido.</p>
+        <a class="mini-link" href="https://www.amazon.es/?tag=vendeconia-21" target="_blank" rel="noopener noreferrer nofollow sponsored">Ver recursos</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-shell">
+    <div class="section-head">
+      <h2>Guías destacadas</h2>
+      <p>Empiece por las rutas más útiles para negocio digital, monetización y automatización.</p>
+    </div>
+
+    <div class="guides-grid">
+      <div class="card">
+        <h3>Crear negocio online con IA</h3>
+        <p>Ideas, sistemas y estructura para lanzar un proyecto digital con inteligencia artificial.</p>
+        <a class="mini-link" href="guias/crear-negocio-online-con-ia/">Abrir guía</a>
+      </div>
+
+      <div class="card">
+        <h3>Ganar dinero con ChatGPT</h3>
+        <p>Formas realistas de monetizar habilidades, contenidos y automatizaciones.</p>
+        <a class="mini-link" href="guias/ganar-dinero-con-chatgpt/">Abrir guía</a>
+      </div>
+
+      <div class="card">
+        <h3>Negocios con inteligencia artificial</h3>
+        <p>Modelos y oportunidades para crear ingresos aprovechando IA y activos digitales.</p>
+        <a class="mini-link" href="guias/negocios-con-inteligencia-artificial/">Abrir guía</a>
+      </div>
+
+      <div class="card">
+        <h3>Prompts que funcionan</h3>
+        <p>Aprenda a escribir instrucciones que produzcan mejores respuestas y mejores sistemas.</p>
+        <a class="mini-link" href="guias/como-escribir-prompts-que-funcionan-formula-simple-con-ejemplos/">Abrir guía</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-shell">
+    <div class="section-head">
+      <h2>Todo el ecosistema IA</h2>
+      <p>Los proyectos del sistema conectados en una misma línea de trabajo.</p>
+    </div>
+
+   <div class="carousel-wrap">
+  <div class="carousel-track">
+    <a class="carousel-item" href="https://automatizatunegocio.org/" target="_blank" rel="noopener noreferrer" aria-label="Ir a AutomatizaTuNegocio">
+      <img src="img/logo-automatizatunegocio.png" alt="AutomatizaTuNegocio">
+    </a>
+
+    <a class="carousel-item" href="https://gadgetsmania.org/" target="_blank" rel="noopener noreferrer" aria-label="Ir a Gadgetsmania">
+      <img src="img/logo-gadgetsmania.png" alt="Gadgetsmania">
+    </a>
+
+    <a class="carousel-item" href="https://vendeconia.org/" target="_blank" rel="noopener noreferrer" aria-label="Ir a VendeConIA">
+      <img src="img/logo-vendeconia.png" alt="VendeConIA">
+    </a>
+
+    <a class="carousel-item" href="https://sistemamaestroia.com/" target="_blank" rel="noopener noreferrer" aria-label="Ir a SistemaMaestroIA">
+      <img src="img/logo-sistemamaestroia.png" alt="SistemaMaestroIA">
+    </a>
+
+    <a class="carousel-item" href="./" aria-label="Ir a InfoVendeConIA">
+      <img src="img/logo-infovendeconia.png" alt="InfoVendeConIA">
+    </a>
+
+    <a class="carousel-item" href="https://automatizatunegocio.org/" target="_blank" rel="noopener noreferrer" aria-label="Ir a AutomatizaTuNegocio">
+      <img src="img/logo-automatizatunegocio.png" alt="AutomatizaTuNegocio">
+    </a>
+
+    <a class="carousel-item" href="https://gadgetsmania.org/" target="_blank" rel="noopener noreferrer" aria-label="Ir a Gadgetsmania">
+      <img src="img/logo-gadgetsmania.png" alt="Gadgetsmania">
+    </a>
+
+    <a class="carousel-item" href="https://vendeconia.org/" target="_blank" rel="noopener noreferrer" aria-label="Ir a VendeConIA">
+      <img src="img/logo-vendeconia.png" alt="VendeConIA">
+    </a>
+
+    <a class="carousel-item" href="https://sistemamaestroia.com/" target="_blank" rel="noopener noreferrer" aria-label="Ir a SistemaMaestroIA">
+      <img src="img/logo-sistemamaestroia.png" alt="SistemaMaestroIA">
+    </a>
+
+    <a class="carousel-item" href="./" aria-label="Ir a InfoVendeConIA">
+      <img src="img/logo-infovendeconia.png" alt="InfoVendeConIA">
+    </a>
+  </div>
+
+</section>
+
+<section class="cta-master">
+  <div class="cta-box">
+    <div>
+      <h2>Sistema Maestro IA</h2>
+      <p>
+        La plataforma para crear asistentes inteligentes, automatizar contenido,
+        captación y monetización sin depender de procesos manuales.
+      </p>
+    </div>
+
+    <a class="btn btn-primary" href="https://sistemamaestroia.com/" target="_blank" rel="noopener noreferrer">
+      Descubrir la plataforma
+    </a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-shell">
+    <div class="footer-brand">
+      <p>
+        Guías, herramientas y sistemas para monetizar mejor con inteligencia artificial,
+        automatización y activos digitales.
+      </p>
+    </div>
+
+    <div class="footer-col">
+      <h3>Guías</h3>
+      <a href="guias/">Biblioteca</a>
+      <a href="guias/negocios-con-inteligencia-artificial/">Negocio con IA</a>
+      <a href="guias/ganar-dinero-con-chatgpt/">Monetización</a>
+      <a href="guias/como-escribir-prompts-que-funcionan-formula-simple-con-ejemplos/">Prompts</a>
+    </div>
+
+    <div class="footer-col">
+      <h3>Ecosistema</h3>
+      <a href="https://automatizatunegocio.org/" target="_blank" rel="noopener noreferrer">AutomatizaTuNegocio</a>
+      <a href="https://vendeconia.org/" target="_blank" rel="noopener noreferrer">VendeConIA</a>
+      <a href="https://sistemamaestroia.com/" target="_blank" rel="noopener noreferrer">SistemaMaestroIA</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
