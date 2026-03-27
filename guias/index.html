@@ -4,20 +4,33 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Guías IA | InfoVendeConIA</title>
-<meta name="description" content="Guías prácticas de inteligencia artificial, automatización y negocio digital.">
-<link rel="canonical" href="https://infovendeconia.vercel.app/guias/">
 </head>
 
 <body style="font-family:Arial;background:#021428;color:white;padding:40px">
 
-<h1>Guías de inteligencia artificial</h1>
+<h1>Guías disponibles</h1>
 
-<ul>
-<li><a href="./como-aprender-sobre-ia-recursos-y-cursos-recomendados/">Cómo aprender IA</a></li>
-<li><a href="./ia-y-etica-consideraciones-importantes/">IA y ética</a></li>
-<li><a href="./como-usar-chatgpt/">Cómo usar ChatGPT</a></li>
-<li><a href="./crear-negocio-online-con-ia/">Negocio con IA</a></li>
-</ul>
+<ul id="lista"></ul>
+
+<script>
+const guias = [
+"analisis-predictivo-con-ia",
+"automatizacion-de-procesos-con-ia",
+"automatizar-ingresos-online",
+"automatizar-negocio-digital",
+"como-aprender-sobre-ia-recursos-y-cursos-recomendados",
+"como-usar-chatgpt",
+"crear-negocio-online-con-ia"
+];
+
+const ul = document.getElementById("lista");
+
+guias.forEach(g => {
+  const li = document.createElement("li");
+  li.innerHTML = `<a href="./${g}/">${g.replaceAll("-", " ")}</a>`;
+  ul.appendChild(li);
+});
+</script>
 
 </body>
 </html>
