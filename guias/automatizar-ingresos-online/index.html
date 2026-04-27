@@ -3,454 +3,139 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Automatizar ingresos online</title>
-  <meta name="description" content="Automatizar ingresos online. Guía completa actualizada.">
+  <title>Automatizar ingresos online | InfoVendeConIA</title>
+  <meta name="description" content="Guía visual para automatizar ingresos online con IA: fases, herramientas, checklist y CTA de implementación.">
   <link rel="canonical" href="https://infovendeconia.com/guias/automatizar-ingresos-online/">
-  <link rel="icon" type="image/png" href="../../img/favicon.png">
-
+  <link rel="icon" type="image/png" href="/img/logo-infovendeconia.png">
   <style>
-    :root{--bg:#061418;--bg-2:#0b1d23;--panel:#0e2229;--panel-2:#102931;--line:rgba(255,255,255,.08);--text:#eef7f2;--muted:#bdd1c8;--green:#19c37d;--green-2:#4de0a2;--amber:#e6b85c;--amber-2:#f3cd7b;--shadow:0 18px 55px rgba(0,0,0,.35);--radius:22px;--radius-sm:16px;--max:1240px}
-    *{box-sizing:border-box} html{scroll-behavior:smooth}
-    body{margin:0;font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;color:var(--text);background:radial-gradient(circle at 10% 10%, rgba(25,195,125,.12), transparent 22%),radial-gradient(circle at 85% 12%, rgba(230,184,92,.10), transparent 22%),linear-gradient(135deg, #061418 0%, #071920 38%, #0b2027 100%);line-height:1.7}
-    a{color:inherit;text-decoration:none} img{max-width:100%;height:auto;display:block}
-    .site-header{position:sticky;top:0;z-index:100;backdrop-filter:blur(10px);background:rgba(6,20,24,.78);border-bottom:1px solid var(--line)}
-    .header-shell{max-width:var(--max);margin:0 auto;padding:16px 24px;display:flex;align-items:center;justify-content:space-between;gap:20px}
-    .logo-link{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.2px}
-    .logo-mark{width:44px;height:44px;border-radius:14px;background:linear-gradient(135deg, rgba(25,195,125,.22), rgba(230,184,92,.18));border:1px solid rgba(255,255,255,.08);box-shadow:var(--shadow);display:grid;place-items:center;font-size:1rem;color:var(--green-2);font-weight:900}
-    .logo-text{display:flex;flex-direction:column;line-height:1.05}
-    .logo-text strong{font-size:1rem;color:var(--text)}
-    .logo-text span{font-size:.78rem;color:var(--muted);font-weight:600}
-    .main-nav{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
-    .main-nav a{color:var(--muted);font-weight:600;font-size:.96rem;transition:.2s ease}
-    .main-nav a:hover{color:var(--text)}
-    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:0 18px;border-radius:14px;border:1px solid transparent;font-weight:800;font-size:.96rem;transition:transform .2s ease, box-shadow .2s ease, background .2s ease, border-color .2s ease}
-    .btn:hover{transform:translateY(-1px)}
-    .btn-primary{background:linear-gradient(135deg, var(--amber), var(--amber-2));color:#1d1607 !important;box-shadow:0 10px 28px rgba(230,184,92,.22)}
-    .btn-secondary{background:rgba(255,255,255,.03);border-color:rgba(255,255,255,.08);color:var(--text)}
-    .hero{padding:44px 24px 18px} .hero-shell{max-width:var(--max);margin:0 auto}
-    .hero-grid{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(320px,.72fr);gap:28px;align-items:stretch}
-    .hero-copy,.hero-card{background:linear-gradient(180deg, rgba(12,31,36,.88), rgba(10,24,29,.92));border:1px solid var(--line);border-radius:30px;box-shadow:var(--shadow)}
-    .hero-copy{padding:34px;position:relative;overflow:hidden}
-    .eyebrow{display:inline-flex;align-items:center;gap:8px;margin:0 0 16px;padding:8px 12px;border-radius:999px;background:rgba(25,195,125,.10);color:var(--green-2);border:1px solid rgba(25,195,125,.18);font-size:.78rem;font-weight:900;text-transform:uppercase;letter-spacing:.08em}
-    .hero h1{margin:0 0 16px;font-size:clamp(2.25rem, 4.6vw, 4.7rem);line-height:1.03;letter-spacing:-.03em;max-width:12ch}
-    .hero-lead{margin:0;max-width:68ch;font-size:1.12rem;color:var(--muted)}
-    .hero-meta{display:flex;flex-wrap:wrap;gap:12px;margin:22px 0 0;padding:0;list-style:none}
-    .hero-meta li{padding:10px 14px;border-radius:999px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);color:var(--text);font-size:.92rem;font-weight:700}
-    .hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
-    .hero-card{padding:28px;display:flex;flex-direction:column;justify-content:space-between}
-    .badge{display:inline-flex;width:max-content;margin-bottom:14px;padding:8px 12px;border-radius:999px;font-size:.75rem;font-weight:900;letter-spacing:.08em;text-transform:uppercase;color:#1e1908;background:linear-gradient(135deg, var(--amber), var(--amber-2))}
-    .hero-card h3{margin:0 0 12px;font-size:1.45rem;line-height:1.15} .hero-card p{margin:0 0 18px;color:var(--muted)}
-    .mini-list{display:grid;gap:10px;padding:0;margin:0 0 22px;list-style:none}
-    .mini-list li{padding-left:18px;position:relative;color:var(--text);font-weight:600}
-    .mini-list li::before{content:"";position:absolute;left:0;top:.75em;width:8px;height:8px;border-radius:999px;background:var(--green);box-shadow:0 0 0 6px rgba(25,195,125,.12);transform:translateY(-50%)}
-    .affiliate-strip{max-width:var(--max);margin:18px auto 0;padding:0 24px}
-    .strip-shell{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
-    .strip-card{padding:18px;border-radius:20px;background:linear-gradient(180deg, rgba(12,31,36,.88), rgba(10,24,29,.92));border:1px solid var(--line);box-shadow:var(--shadow)}
-    .strip-card strong{display:block;margin-bottom:6px;font-size:1rem}
-    .strip-card p{margin:0 0 14px;color:var(--muted);font-size:.94rem;line-height:1.55}
-    .mini-btn{display:inline-flex;align-items:center;justify-content:center;min-height:38px;padding:0 14px;border-radius:12px;font-size:.88rem;font-weight:800;background:rgba(25,195,125,.10);color:var(--green-2);border:1px solid rgba(25,195,125,.18)}
-    .article-wrap{padding:18px 24px 60px} .article-shell{max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:28px;align-items:start}
-    .toc{margin:0 0 22px;padding:22px;background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow)}
-    .toc h2{margin:0 0 14px;font-size:1.15rem} .toc-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
-    .toc a{display:block;padding:12px 14px;border-radius:14px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.05);color:var(--muted);font-weight:700;font-size:.95rem}
-    .section-card{margin-bottom:22px;padding:28px;background:linear-gradient(180deg, rgba(12,30,35,.88), rgba(9,23,28,.9));border:1px solid var(--line);border-radius:24px;box-shadow:var(--shadow)}
-    .section-card h2{margin:0 0 14px;font-size:clamp(1.45rem, 2.6vw, 2.15rem);line-height:1.15;letter-spacing:-.02em}
-    .section-card h3{margin:0 0 12px;font-size:1.18rem;line-height:1.2}
-    .section-card p{margin:0 0 14px;color:var(--muted);font-size:1.02rem}
-    .section-card ul,.section-card ol{margin:0;padding-left:22px;color:var(--muted)} .section-card li{margin-bottom:10px}
-    .summary-box{border-color:rgba(25,195,125,.22);background:linear-gradient(180deg, rgba(11,40,32,.82), rgba(10,28,26,.92))}
-    .example-box{border-color:rgba(230,184,92,.22);background:linear-gradient(180deg, rgba(39,28,9,.56), rgba(18,25,28,.92))}
-    .warning-box{border-color:rgba(255,179,71,.18);background:linear-gradient(180deg, rgba(35,22,10,.68), rgba(14,25,29,.92))}
-    .tool-box{border-color:rgba(25,195,125,.22);background:linear-gradient(180deg, rgba(10,44,34,.78), rgba(10,25,28,.94))}
-    .check-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:16px}
-    .check-card{padding:16px 18px;border-radius:18px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06)}
-    .check-card strong{display:block;margin-bottom:8px;color:var(--text);font-size:.98rem}
-    .tool-compare{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:16px}
-    .tool-compare-card{padding:18px;border-radius:20px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06)}
-    .tool-compare-card strong{display:block;margin-bottom:8px;font-size:1rem}
-    .tool-compare-card p{margin:0 0 14px;font-size:.94rem;color:var(--muted)}
-    .tool-compare-card .mini-btn{width:100%}
-    .scroll-cards{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(240px, 1fr);gap:16px;overflow-x:auto;padding-bottom:6px;scrollbar-width:thin}
-    .scroll-card{padding:20px;border-radius:18px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);min-height:100%}
-    .scroll-card strong{display:block;margin-bottom:8px;font-size:1rem} .scroll-card p{margin:0 0 14px;color:var(--muted);font-size:.94rem}
-    .sidebar{display:grid;gap:18px;position:sticky;top:92px}
-    .sidebar-box{padding:22px;border-radius:22px;background:linear-gradient(180deg, rgba(12,30,35,.88), rgba(9,23,28,.9));border:1px solid var(--line);box-shadow:var(--shadow)}
-    .sidebar-box h3{margin:0 0 14px;font-size:1.08rem} .sidebar-box p{margin:0;color:var(--muted);font-size:.96rem}
-    .sidebar-links{display:grid;gap:10px}
-    .sidebar-links a{display:block;padding:12px 14px;border-radius:14px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.05);color:var(--muted);font-weight:700}
-    .tool-mini{display:flex;align-items:flex-start;gap:12px;margin-bottom:14px}
-    .tool-mini:last-child{margin-bottom:0}
-    .tool-icon{flex:0 0 42px;width:42px;height:42px;border-radius:14px;display:grid;place-items:center;background:rgba(25,195,125,.12);color:var(--green-2);font-weight:900;border:1px solid rgba(25,195,125,.18)}
-    .tool-copy strong{display:block;margin-bottom:3px;font-size:.96rem} .tool-copy span{color:var(--muted);font-size:.9rem}
-    .ecosystem-box{margin-top:22px;padding:30px;border-radius:26px;border:1px solid rgba(230,184,92,.20);background:linear-gradient(135deg, rgba(25,195,125,.10), rgba(230,184,92,.08));box-shadow:var(--shadow)}
-    .ecosystem-box h2{margin:0 0 12px;font-size:1.55rem;line-height:1.1} .ecosystem-box p{margin:0 0 18px;color:var(--muted)}
-    .site-footer{margin-top:24px;border-top:1px solid var(--line);background:rgba(4,14,17,.75)}
-    .footer-shell{max-width:var(--max);margin:0 auto;padding:34px 24px 44px;display:grid;grid-template-columns:1.25fr .85fr .85fr .95fr;gap:24px}
-    .footer-brand p,.footer-col a{color:var(--muted);font-size:.95rem} .footer-brand p{margin:12px 0 0;max-width:34ch}
-    .footer-col h3{margin:0 0 14px;font-size:1rem} .footer-col{display:grid;align-content:start;gap:10px}
-    .footer-mark{width:52px;height:52px;border-radius:16px;display:grid;place-items:center;background:linear-gradient(135deg, rgba(25,195,125,.20), rgba(230,184,92,.14));border:1px solid rgba(255,255,255,.08);color:var(--green-2);font-weight:900;font-size:1.05rem}
-    @media (max-width:1100px){.hero-grid,.article-shell,.footer-shell,.strip-shell,.tool-compare{grid-template-columns:1fr} .sidebar{position:static}}
-    @media (max-width:720px){.header-shell{padding:14px 16px} .hero,.affiliate-strip,.article-wrap{padding-left:16px;padding-right:16px} .main-nav{display:none} .toc-grid,.check-grid,.related-grid{grid-template-columns:1fr}}
+    :root{--bg:#061418;--line:rgba(255,255,255,.08);--text:#eef7f2;--muted:#bdd1c8;--green:#19c37d;--green2:#4de0a2;--amber:#e6b85c;--amber2:#f3cd7b;--max:1240px;--shadow:0 18px 55px rgba(0,0,0,.35)}
+    *{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;color:var(--text);background:radial-gradient(circle at 10% 10%, rgba(25,195,125,.12), transparent 22%),radial-gradient(circle at 85% 12%, rgba(230,184,92,.10), transparent 22%),linear-gradient(135deg,#061418,#0b2027);line-height:1.65}
+    a{text-decoration:none;color:inherit}
+    .site-header{position:sticky;top:0;z-index:20;background:rgba(6,20,24,.78);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+    .header-shell{max-width:var(--max);margin:auto;padding:16px 24px;display:flex;justify-content:space-between;align-items:center;gap:14px}
+    .logo{display:flex;align-items:center;gap:10px;font-weight:800}.logo img{width:42px;height:42px;border-radius:12px}
+    .nav{display:flex;gap:14px;flex-wrap:wrap}.nav a{color:var(--muted);font-weight:700}.nav a:hover{color:var(--text)}
+    .hero{max-width:var(--max);margin:auto;padding:42px 24px 14px;display:grid;grid-template-columns:1.35fr .8fr;gap:20px}
+    .panel{background:linear-gradient(180deg, rgba(12,31,36,.88), rgba(10,24,29,.92));border:1px solid var(--line);border-radius:24px;box-shadow:var(--shadow)}
+    .hero-main{padding:30px}.badge{display:inline-flex;padding:8px 12px;border-radius:999px;background:rgba(25,195,125,.10);color:var(--green2);border:1px solid rgba(25,195,125,.22);font-size:.78rem;font-weight:900;text-transform:uppercase;letter-spacing:.08em}
+    h1{margin:14px 0 10px;font-size:clamp(2rem,4.2vw,3.7rem);line-height:1.06}.lead{color:var(--muted);max-width:64ch}
+    .meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px;padding:0;list-style:none}.meta li{padding:8px 12px;border-radius:999px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);font-weight:700}
+    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 16px;border-radius:12px;font-weight:800}
+    .btn-primary{background:linear-gradient(135deg,var(--amber),var(--amber2));color:#1d1607}.btn-secondary{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08)}
+    .hero-side{padding:24px}.hero-side h3{margin:0 0 10px}.hero-side p{margin:0 0 12px;color:var(--muted)}.hero-side ul{margin:0;padding-left:18px;color:var(--muted)}
+    .wrap{max-width:var(--max);margin:auto;padding:16px 24px 56px;display:grid;grid-template-columns:1fr 320px;gap:20px}
+    .section{padding:24px;margin-bottom:16px}.section h2{margin:0 0 10px;font-size:1.6rem}.section p{margin:0 0 10px;color:var(--muted)}
+    .grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+    .card{padding:16px;border-radius:16px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06)}
+    .card strong{display:block;margin-bottom:6px}
+    .checklist{margin:0;padding-left:18px;color:var(--muted)}.checklist li{margin-bottom:8px}
+    .sidebar{position:sticky;top:90px;display:grid;gap:14px;height:max-content}
+    .side{padding:18px}.side h3{margin:0 0 8px}.side p{margin:0 0 10px;color:var(--muted)}
+    .site-footer{border-top:1px solid var(--line);background:rgba(4,14,17,.75)}
+    .footer-shell{max-width:var(--max);margin:auto;padding:34px 24px 44px;display:grid;grid-template-columns:1.25fr .85fr .85fr .95fr .85fr;gap:24px}
+    .footer-col,.footer-brand{display:grid;align-content:start;gap:10px}.footer-col h3{margin:0 0 8px}.footer-col a,.footer-brand p{color:var(--muted);font-size:.95rem}
+    .footer-mark{width:52px;height:52px;border-radius:16px;display:grid;place-items:center;background:linear-gradient(135deg,rgba(25,195,125,.20),rgba(230,184,92,.14));border:1px solid rgba(255,255,255,.08);font-weight:900;color:var(--green2)}
+    @media (max-width:1100px){.hero,.wrap,.grid2,.footer-shell{grid-template-columns:1fr}.sidebar{position:static}}
   </style>
 </head>
 <body>
   <header class="site-header">
     <div class="header-shell">
-      <a href="../../index.html" class="logo-link" aria-label="InfoVendeConIA">
-        <span class="logo-mark">IV</span>
-        <span class="logo-text">
-          <strong>InfoVendeConIA</strong>
-          <span>Guías premium de negocio e IA</span>
-        </span>
-      </a>
-      <nav class="main-nav" aria-label="Principal">
-        <a href="../../index.html">Inicio</a>
-        <a href="../index.html">Guías</a>
-        <a href="../como-escribir-prompts-que-funcionan-formula-simple-con-ejemplos/">Prompts</a>
-        <a href="../como-crear-webs-que-vendan-con-ia/">Webs con IA</a>
-        <a href="https://sistemamaestroia.com/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Crear mi sistema IA</a>
-      </nav>
+      <a class="logo" href="/index.html"><img src="/img/logo-infovendeconia.png" alt="InfoVendeConIA"><span>InfoVendeConIA</span></a>
+      <nav class="nav"><a href="/index.html">Inicio</a><a href="/guias/">Guías</a><a href="/negocios/">Negocios</a></nav>
     </div>
   </header>
 
   <section class="hero">
-    <div class="hero-shell">
-      <div class="hero-grid">
-        <div class="hero-copy">
-          <span class="eyebrow">Guía InfoVendeConIA</span>
-          <h1>Automatizar ingresos online</h1>
-          <p class="hero-lead">Esto ha provocado que muchas plataformas SaaS integren inteligencia artificial dentro de sus herramientas.</p>
-          <ul class="hero-meta">
-            <li>Actualizado: 2026</li>
-            <li>Lectura: 6 min</li>
-            <li>Nivel: práctico</li>
-          </ul>
-          <div class="hero-actions">
-            <a href="#contenido" class="btn btn-primary">Empezar la guía</a>
-            <a href="../index.html" class="btn btn-secondary">Ver todas las guías</a>
-          </div>
-        </div>
-        <aside class="hero-card">
-          <div>
-            <span class="badge">Herramienta recomendada</span>
-            <h3>Systeme.io</h3>
-            <p>Si además de aplicar IA quiere captar leads, montar formularios, embudos y automatizar seguimiento comercial, es una de las rutas más simples para empezar.</p>
-            <ul class="mini-list">
-              <li>Captación y embudos</li>
-              <li>Email marketing automatizado</li>
-              <li>Páginas y formularios</li>
-            </ul>
-          </div>
-          <a href="https://systeme.io/es?sa=sa0265622982c7f37465c7b29f0138ab412c445b08" target="_blank" rel="noopener noreferrer nofollow sponsored" class="btn btn-primary">Probar Systeme gratis</a>
-        </aside>
-      </div>
+    <div class="panel hero-main">
+      <span class="badge">Guía práctica</span>
+      <h1>Automatizar ingresos online sin complicarte</h1>
+      <p class="lead">La idea base se mantiene: usar IA y automatización para vender más con menos tareas manuales. Aquí la tienes convertida en un formato visual, accionable y escaneable.</p>
+      <ul class="meta"><li>Actualizado 2026</li><li>Nivel práctico</li><li>Implementación por fases</li></ul>
+      <div class="actions"><a class="btn btn-primary" href="#plan">Ver plan de acción</a><a class="btn btn-secondary" href="/guias/">Volver a guías</a></div>
     </div>
+    <aside class="panel hero-side">
+      <h3>Resultado esperado</h3>
+      <p>Montar un sistema mínimo que capte leads, entregue contenido y cierre ventas con seguimiento automático.</p>
+      <ul>
+        <li>Captación constante</li>
+        <li>Secuencia automática</li>
+        <li>Métricas para optimizar</li>
+      </ul>
+    </aside>
   </section>
 
-  <section class="affiliate-strip">
-    <div class="strip-shell">
-      <div class="strip-card"><strong>Systeme.io</strong><p>Captación, formularios, embudos y automatización básica.</p><a class="mini-btn" href="https://systeme.io/es?sa=sa0265622982c7f37465c7b29f0138ab412c445b08" target="_blank" rel="noopener noreferrer nofollow sponsored">Ver Systeme</a></div>
-      <div class="strip-card"><strong>Hostinger</strong><p>Hosting, webs, dominios y proyectos online con coste bajo.</p><a class="mini-btn" href="https://www.hostinger.com/es?REFERRALCODE=DZOJOSUECS4D" target="_blank" rel="noopener noreferrer nofollow sponsored">Ver Hostinger</a></div>
-      <div class="strip-card"><strong>Pictory</strong><p>Vídeos con IA a partir de artículos, guiones y scripts.</p><a class="mini-btn" href="https://pictory.ai?ref=joshue-cabello-rosa72" target="_blank" rel="noopener noreferrer nofollow sponsored">Ver Pictory</a></div>
-      <div class="strip-card"><strong>Amazon</strong><p>Recursos físicos, accesorios y setup para productividad.</p><a class="mini-btn" href="https://www.amazon.es/?tag=vendeconia-21" target="_blank" rel="noopener noreferrer nofollow sponsored">Ver Amazon</a></div>
+  <main class="wrap" id="plan">
+    <div>
+      <section class="panel section">
+        <h2>Fase 1: Defina una oferta simple</h2>
+        <p>Evite empezar por herramientas. Primero cierre una propuesta clara: qué problema resuelve, para quién y en cuánto tiempo.</p>
+        <div class="grid2">
+          <div class="card"><strong>Cliente ideal</strong><p>Un perfil concreto con dolor real y capacidad de compra.</p></div>
+          <div class="card"><strong>Promesa</strong><p>Resultado medible, sin humo y con un plazo razonable.</p></div>
+          <div class="card"><strong>Producto base</strong><p>Servicio, consultoría o activo digital fácil de entregar.</p></div>
+          <div class="card"><strong>Precio inicial</strong><p>Simple, sin demasiadas opciones, para validar rápido.</p></div>
+        </div>
+      </section>
+
+      <section class="panel section">
+        <h2>Fase 2: Active captación y seguimiento</h2>
+        <p>Cuando la oferta está clara, automatice lo repetitivo: formulario, secuencia de emails y clasificación de leads.</p>
+        <ul class="checklist">
+          <li>Landing con 1 objetivo y CTA visible.</li>
+          <li>Formulario corto y lead magnet útil.</li>
+          <li>Secuencia de 3-5 emails orientados a conversión.</li>
+          <li>Reglas básicas: apertura, clic, respuesta y seguimiento.</li>
+        </ul>
+      </section>
+
+      <section class="panel section">
+        <h2>Fase 3: Publique contenido que venda</h2>
+        <p>Use IA para acelerar ideación, guiones y reutilización multicanal sin perder claridad del mensaje.</p>
+        <div class="grid2">
+          <div class="card"><strong>Contenido de atracción</strong><p>Problema → error común → micro-solución → CTA.</p></div>
+          <div class="card"><strong>Contenido de confianza</strong><p>Casos, comparativas, preguntas frecuentes y objeciones.</p></div>
+          <div class="card"><strong>Contenido de cierre</strong><p>Oferta, plazo, bonus y siguiente paso claro.</p></div>
+          <div class="card"><strong>Contenido reciclable</strong><p>1 pieza larga → shorts, carruseles, emails y snippets.</p></div>
+        </div>
+      </section>
+
+      <section class="panel section">
+        <h2>Checklist de implementación (7 días)</h2>
+        <ul class="checklist">
+          <li><strong>Día 1:</strong> oferta, avatar y CTA principal.</li>
+          <li><strong>Día 2:</strong> landing y formulario.</li>
+          <li><strong>Día 3:</strong> secuencia automática inicial.</li>
+          <li><strong>Día 4:</strong> 3 piezas de contenido de atracción.</li>
+          <li><strong>Día 5:</strong> 1 pieza de autoridad + 1 CTA fuerte.</li>
+          <li><strong>Día 6:</strong> revisión de métricas y ajustes.</li>
+          <li><strong>Día 7:</strong> iteración: mejorar lo que ya funcionó.</li>
+        </ul>
+      </section>
+
+      <section class="panel section">
+        <h2>CTA: siguiente paso recomendado</h2>
+        <p>Si quiere ejecutar todo en una sola plataforma (captación, embudos, email y automatizaciones), puede empezar por un stack simple.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="https://systeme.io/es?sa=sa0265622982c7f37465c7b29f0138ab412c445b08" target="_blank" rel="noopener noreferrer nofollow sponsored">Probar Systeme gratis</a>
+          <a class="btn btn-secondary" href="/guias/automatizar-tareas-repetitivas-con-ia/">Ver guía de automatización</a>
+        </div>
+      </section>
     </div>
-  </section>
 
-  <main class="article-wrap">
-    <div class="article-shell">
-      <div class="article-main" id="contenido">
-        <nav class="toc" aria-label="Índice del artículo">
-          <h2>Índice rápido</h2>
-          <div class="toc-grid">
-            <a href="#introduccion">Introducción</a>
-            <a href="#por-que-este-tema-es-importante">Por qué este tema es importante</a>
-            <a href="#como-funciona">Cómo funciona</a>
-            <a href="#ventajas-principales">Ventajas principales</a>
-            <a href="#herramientas-recomendadas">Herramientas recomendadas</a>
-            <a href="#aplicaciones-practicas">Aplicaciones prácticas</a>
-          </div>
-        </nav>
-
-        
-        <section id="introduccion" class="section-card">
-          <h2>Introducción</h2>
-          <p>Esto ha provocado que muchas plataformas SaaS integren inteligencia artificial dentro de sus herramientas.</p>
-            <p>Muchas empresas están adoptando soluciones basadas en inteligencia artificial y automatización para aumentar su productividad y reducir costes.</p>
-            <p>En los últimos años han aparecido herramientas que facilitan aplicar automatizar ingresos online incluso sin conocimientos técnicos avanzados.</p>
-            <p>Comprender cómo funciona automatizar ingresos online permite optimizar recursos, reducir tareas manuales y construir proyectos digitales mucho más eficientes.</p>
-            <p>Automatizar ingresos online se ha convertido en un tema clave dentro del mundo digital. Cada vez más emprendedores buscan formas de aplicar tecnología para mejorar procesos y crear nuevas oportunidades de negocio.</p>
-            <p>Para emprendedores digitales, entender estas tecnologías puede abrir la puerta a nuevos modelos de negocio.</p>
-            <p>Automatizar ingresos online se ha convertido en un tema clave dentro del mundo digital. Cada vez más emprendedores buscan formas de aplicar tecnología para mejorar procesos y crear nuevas oportunidades de negocio.</p>
-        </section>
-        
-
-        <section id="por-que-este-tema-es-importante" class="section-card summary-box">
-          <h2>Por qué este tema es importante</h2>
-          <p>Los negocios digitales modernos dependen cada vez más de sistemas automáticos que permiten ahorrar tiempo y mejorar resultados.</p>
-            <p>Automatizar ingresos online se ha convertido en un tema clave dentro del mundo digital. Cada vez más emprendedores buscan formas de aplicar tecnología para mejorar procesos y crear nuevas oportunidades de negocio.</p>
-            <p>Además, aplicar automatizar ingresos online permite analizar datos, automatizar tareas repetitivas y mejorar la toma de decisiones.</p>
-            <p>Muchas empresas están adoptando soluciones basadas en inteligencia artificial y automatización para aumentar su productividad y reducir costes.</p>
-            <p>Comprender cómo funciona automatizar ingresos online permite optimizar recursos, reducir tareas manuales y construir proyectos digitales mucho más eficientes.</p>
-            <p>Automatizar ingresos online se ha convertido en un tema clave dentro del mundo digital. Cada vez más emprendedores buscan formas de aplicar tecnología para mejorar procesos y crear nuevas oportunidades de negocio.</p>
-            <p>Automatizar ingresos online se ha convertido en un tema clave dentro del mundo digital. Cada vez más emprendedores buscan formas de aplicar tecnología para mejorar procesos y crear nuevas oportunidades de negocio.</p>
-            <p>Muchas empresas están adoptando soluciones basadas en inteligencia artificial y automatización para aumentar su productividad y reducir costes.</p>
-            <p>Comprender cómo funciona automatizar ingresos online permite optimizar recursos, reducir tareas manuales y construir proyectos digitales mucho más eficientes.</p>
-        </section>
-        
-
-        <section id="como-funciona" class="section-card">
-          <h2>Cómo funciona</h2>
-          <p>Además, aplicar automatizar ingresos online permite analizar datos, automatizar tareas repetitivas y mejorar la toma de decisiones.</p>
-            <p>Muchas empresas están adoptando soluciones basadas en inteligencia artificial y automatización para aumentar su productividad y reducir costes.</p>
-            <p>Además, aplicar automatizar ingresos online permite analizar datos, automatizar tareas repetitivas y mejorar la toma de decisiones.</p>
-            <p>Esto ha provocado que muchas plataformas SaaS integren inteligencia artificial dentro de sus herramientas.</p>
-            <p>Implementar soluciones tecnológicas no significa complicar los procesos, sino simplificarlos mediante automatización.</p>
-            <p>Los negocios digitales modernos dependen cada vez más de sistemas automáticos que permiten ahorrar tiempo y mejorar resultados.</p>
-            <p>Esto ha provocado que muchas plataformas SaaS integren inteligencia artificial dentro de sus herramientas.</p>
-            <p>Para emprendedores digitales, entender estas tecnologías puede abrir la puerta a nuevos modelos de negocio.</p>
-        </section>
-        
-
-        <section id="ventajas-principales" class="section-card">
-          <h2>Ventajas principales</h2>
-          <p>Muchas empresas están adoptando soluciones basadas en inteligencia artificial y automatización para aumentar su productividad y reducir costes.</p>
-            <p>En los últimos años han aparecido herramientas que facilitan aplicar automatizar ingresos online incluso sin conocimientos técnicos avanzados.</p>
-            <p>El uso estratégico de tecnología puede marcar la diferencia entre un proyecto que apenas avanza y uno que crece de forma escalable.</p>
-            <p>Muchas empresas están adoptando soluciones basadas en inteligencia artificial y automatización para aumentar su productividad y reducir costes.</p>
-            <p>Para emprendedores digitales, entender estas tecnologías puede abrir la puerta a nuevos modelos de negocio.</p>
-            <p>El uso estratégico de tecnología puede marcar la diferencia entre un proyecto que apenas avanza y uno que crece de forma escalable.</p>
-            <p>Comprender cómo funciona automatizar ingresos online permite optimizar recursos, reducir tareas manuales y construir proyectos digitales mucho más eficientes.</p>
-            <p>Muchas empresas están adoptando soluciones basadas en inteligencia artificial y automatización para aumentar su productividad y reducir costes.</p>
-            <p>Implementar soluciones tecnológicas no significa complicar los procesos, sino simplificarlos mediante automatización.</p>
-        </section>
-        
-
-        <section id="herramientas-recomendadas" class="section-card tool-box">
-          <h2>Herramientas recomendadas</h2>
-          <p>En los últimos años han aparecido herramientas que facilitan aplicar automatizar ingresos online incluso sin conocimientos técnicos avanzados.</p>
-            <p>Comprender cómo funciona automatizar ingresos online permite optimizar recursos, reducir tareas manuales y construir proyectos digitales mucho más eficientes.</p>
-            <p>El uso estratégico de tecnología puede marcar la diferencia entre un proyecto que apenas avanza y uno que crece de forma escalable.</p>
-            <p>Comprender cómo funciona automatizar ingresos online permite optimizar recursos, reducir tareas manuales y construir proyectos digitales mucho más eficientes.</p>
-            <p>Para emprendedores digitales, entender estas tecnologías puede abrir la puerta a nuevos modelos de negocio.</p>
-            <p>En los últimos años han aparecido herramientas que facilitan aplicar automatizar ingresos online incluso sin conocimientos técnicos avanzados.</p>
-            <p>Los negocios digitales modernos dependen cada vez más de sistemas automáticos que permiten ahorrar tiempo y mejorar resultados.</p>
-        </section>
-        
-
-        <section id="aplicaciones-practicas" class="section-card">
-          <h2>Aplicaciones prácticas</h2>
-          <p>En los últimos años han aparecido herramientas que facilitan aplicar automatizar ingresos online incluso sin conocimientos técnicos avanzados.</p>
-            <p>Automatizar ingresos online se ha convertido en un tema clave dentro del mundo digital. Cada vez más emprendedores buscan formas de aplicar tecnología para mejorar procesos y crear nuevas oportunidades de negocio.</p>
-            <p>Automatizar ingresos online se ha convertido en un tema clave dentro del mundo digital. Cada vez más emprendedores buscan formas de aplicar tecnología para mejorar procesos y crear nuevas oportunidades de negocio.</p>
-            <p>Muchas empresas están adoptando soluciones basadas en inteligencia artificial y automatización para aumentar su productividad y reducir costes.</p>
-            <p>Automatizar ingresos online se ha convertido en un tema clave dentro del mundo digital. Cada vez más emprendedores buscan formas de aplicar tecnología para mejorar procesos y crear nuevas oportunidades de negocio.</p>
-            <p>En los últimos años han aparecido herramientas que facilitan aplicar automatizar ingresos online incluso sin conocimientos técnicos avanzados.</p>
-            <p>Además, aplicar automatizar ingresos online permite analizar datos, automatizar tareas repetitivas y mejorar la toma de decisiones.</p>
-        </section>
-        
-
-        <section id="consejos-para-empezar" class="section-card">
-          <h2>Consejos para empezar</h2>
-          <p>Los negocios digitales modernos dependen cada vez más de sistemas automáticos que permiten ahorrar tiempo y mejorar resultados.</p>
-            <p>El uso estratégico de tecnología puede marcar la diferencia entre un proyecto que apenas avanza y uno que crece de forma escalable.</p>
-            <p>El uso estratégico de tecnología puede marcar la diferencia entre un proyecto que apenas avanza y uno que crece de forma escalable.</p>
-            <p>Muchas empresas están adoptando soluciones basadas en inteligencia artificial y automatización para aumentar su productividad y reducir costes.</p>
-            <p>El uso estratégico de tecnología puede marcar la diferencia entre un proyecto que apenas avanza y uno que crece de forma escalable.</p>
-            <p>El uso estratégico de tecnología puede marcar la diferencia entre un proyecto que apenas avanza y uno que crece de forma escalable.</p>
-            <p>Automatizar ingresos online se ha convertido en un tema clave dentro del mundo digital. Cada vez más emprendedores buscan formas de aplicar tecnología para mejorar procesos y crear nuevas oportunidades de negocio.</p>
-            <p>Comprender cómo funciona automatizar ingresos online permite optimizar recursos, reducir tareas manuales y construir proyectos digitales mucho más eficientes.</p>
-            <p>Muchas empresas están adoptando soluciones basadas en inteligencia artificial y automatización para aumentar su productividad y reducir costes.</p>
-            <p>Para emprendedores digitales, entender estas tecnologías puede abrir la puerta a nuevos modelos de negocio.</p>
-        </section>
-        
-
-        <section id="errores-comunes" class="section-card warning-box">
-          <h2>Errores comunes</h2>
-          <p>Esto ha provocado que muchas plataformas SaaS integren inteligencia artificial dentro de sus herramientas.</p>
-            <p>En los últimos años han aparecido herramientas que facilitan aplicar automatizar ingresos online incluso sin conocimientos técnicos avanzados.</p>
-            <p>Automatizar ingresos online se ha convertido en un tema clave dentro del mundo digital. Cada vez más emprendedores buscan formas de aplicar tecnología para mejorar procesos y crear nuevas oportunidades de negocio.</p>
-            <p>Esto ha provocado que muchas plataformas SaaS integren inteligencia artificial dentro de sus herramientas.</p>
-            <p>Muchas empresas están adoptando soluciones basadas en inteligencia artificial y automatización para aumentar su productividad y reducir costes.</p>
-            <p>En los últimos años han aparecido herramientas que facilitan aplicar automatizar ingresos online incluso sin conocimientos técnicos avanzados.</p>
-            <p>Muchas empresas están adoptando soluciones basadas en inteligencia artificial y automatización para aumentar su productividad y reducir costes.</p>
-            <p>Implementar soluciones tecnológicas no significa complicar los procesos, sino simplificarlos mediante automatización.</p>
-        </section>
-        
-
-        <section id="estrategias-avanzadas" class="section-card">
-          <h2>Estrategias avanzadas</h2>
-          <p>En los últimos años han aparecido herramientas que facilitan aplicar automatizar ingresos online incluso sin conocimientos técnicos avanzados.</p>
-            <p>Comprender cómo funciona automatizar ingresos online permite optimizar recursos, reducir tareas manuales y construir proyectos digitales mucho más eficientes.</p>
-            <p>Muchas empresas están adoptando soluciones basadas en inteligencia artificial y automatización para aumentar su productividad y reducir costes.</p>
-            <p>Esto ha provocado que muchas plataformas SaaS integren inteligencia artificial dentro de sus herramientas.</p>
-            <p>Implementar soluciones tecnológicas no significa complicar los procesos, sino simplificarlos mediante automatización.</p>
-            <p>Los negocios digitales modernos dependen cada vez más de sistemas automáticos que permiten ahorrar tiempo y mejorar resultados.</p>
-            <p>Esto ha provocado que muchas plataformas SaaS integren inteligencia artificial dentro de sus herramientas.</p>
-            <p>Automatizar ingresos online se ha convertido en un tema clave dentro del mundo digital. Cada vez más emprendedores buscan formas de aplicar tecnología para mejorar procesos y crear nuevas oportunidades de negocio.</p>
-        </section>
-        
-
-        <section id="conclusion" class="section-card">
-          <h2>Conclusión</h2>
-          <p>Muchas empresas están adoptando soluciones basadas en inteligencia artificial y automatización para aumentar su productividad y reducir costes.</p>
-            <p>Para emprendedores digitales, entender estas tecnologías puede abrir la puerta a nuevos modelos de negocio.</p>
-            <p>Implementar soluciones tecnológicas no significa complicar los procesos, sino simplificarlos mediante automatización.</p>
-            <p>El uso estratégico de tecnología puede marcar la diferencia entre un proyecto que apenas avanza y uno que crece de forma escalable.</p>
-            <p>Para emprendedores digitales, entender estas tecnologías puede abrir la puerta a nuevos modelos de negocio.</p>
-            <p>Para emprendedores digitales, entender estas tecnologías puede abrir la puerta a nuevos modelos de negocio.</p>
-            <p>Esto ha provocado que muchas plataformas SaaS integren inteligencia artificial dentro de sus herramientas.</p>
-            <p>El uso estratégico de tecnología puede marcar la diferencia entre un proyecto que apenas avanza y uno que crece de forma escalable.</p>
-            <p>Muchas empresas están adoptando soluciones basadas en inteligencia artificial y automatización para aumentar su productividad y reducir costes.</p>
-        </section>
-        
-
-        <section id="conclusion" class="section-card">
-          <h2>Conclusión</h2>
-          <p>La inteligencia artificial y la automatización están cambiando la forma en la que se crean negocios online. Aplicar estas herramientas correctamente permite ahorrar tiempo, mejorar la productividad y escalar proyectos digitales.</p>
-        </section>
-        
-
-        <section class="section-card tool-box">
-          <h2>Qué herramienta usar según su objetivo</h2>
-          <p>
-            No todas sirven para lo mismo. Lo rentable es elegir la herramienta adecuada
-            según la fase del proyecto y el tipo de tarea que quiere resolver.
-          </p>
-
-          <div class="tool-compare">
-            <div class="tool-compare-card">
-              <strong>Systeme.io</strong>
-              <p>Captación, formularios, embudos y automatización básica para negocio digital.</p>
-              <a class="mini-btn" href="https://systeme.io/es?sa=sa0265622982c7f37465c7b29f0138ab412c445b08" target="_blank" rel="noopener noreferrer nofollow sponsored">Probar</a>
-            </div>
-
-            <div class="tool-compare-card">
-              <strong>Hostinger</strong>
-              <p>Hosting, webs, dominios y proyectos online con coste bajo y despliegue rápido.</p>
-              <a class="mini-btn" href="https://www.hostinger.com/es?REFERRALCODE=DZOJOSUECS4D" target="_blank" rel="noopener noreferrer nofollow sponsored">Probar</a>
-            </div>
-
-            <div class="tool-compare-card">
-              <strong>Pictory</strong>
-              <p>Vídeos y shorts con IA a partir de artículos, guiones e ideas.</p>
-              <a class="mini-btn" href="https://pictory.ai?ref=joshue-cabello-rosa72" target="_blank" rel="noopener noreferrer nofollow sponsored">Probar</a>
-            </div>
-
-            <div class="tool-compare-card">
-              <strong>Amazon</strong>
-              <p>Recursos físicos, accesorios y setup para productividad y creación.</p>
-              <a class="mini-btn" href="https://www.amazon.es/?tag=vendeconia-21" target="_blank" rel="noopener noreferrer nofollow sponsored">Ver recursos</a>
-            </div>
-          </div>
-        </section>
-    
-
-        <section class="section-card example-box">
-          <h2>Recursos visuales y herramientas complementarias</h2>
-          <p>
-            Este bloque funciona como una fila premium tipo carrusel/rejilla para mostrar
-            oportunidades relacionadas sin saturar la lectura principal.
-          </p>
-
-          <div class="scroll-cards">
-            <div class="scroll-card">
-              <strong>Pictory para vídeo</strong>
-              <p>Transforme contenido escrito en vídeos y shorts con IA para aumentar alcance.</p>
-              <a class="mini-btn" href="https://pictory.ai?ref=joshue-cabello-rosa72" target="_blank" rel="noopener noreferrer nofollow sponsored">Abrir Pictory</a>
-            </div>
-
-            <div class="scroll-card">
-              <strong>Hostinger para webs</strong>
-              <p>Monte proyectos digitales, landings y blogs rápidos con hosting y dominio.</p>
-              <a class="mini-btn" href="https://www.hostinger.com/es?REFERRALCODE=DZOJOSUECS4D" target="_blank" rel="noopener noreferrer nofollow sponsored">Abrir Hostinger</a>
-            </div>
-
-            <div class="scroll-card">
-              <strong>Amazon productividad</strong>
-              <p>Encuentre recursos físicos para mejorar setup, productividad y producción.</p>
-              <a class="mini-btn" href="https://www.amazon.es/?tag=vendeconia-21" target="_blank" rel="noopener noreferrer nofollow sponsored">Abrir Amazon</a>
-            </div>
-
-            <div class="scroll-card">
-              <strong>Systeme para captar leads</strong>
-              <p>Cree formularios, embudos y automatizaciones sin montar un stack complejo.</p>
-              <a class="mini-btn" href="https://systeme.io/es?sa=sa0265622982c7f37465c7b29f0138ab412c445b08" target="_blank" rel="noopener noreferrer nofollow sponsored">Abrir Systeme</a>
-            </div>
-          </div>
-        </section>
-    
-
-        <section class="ecosystem-box">
-          <h2>Automatiza todo su sistema</h2>
-          <p>
-            Si quiere ir más allá de una sola automatización y construir una estructura real de agentes,
-            contenido, captación y monetización, explore el ecosistema de SistemaMaestroIA.
-          </p>
-          <a href="https://sistemamaestroia.com/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-            Crear mi sistema automático
-          </a>
-        </section>
-    
-
-      </div>
-
-      <aside class="sidebar">
-        <div class="sidebar-box">
-          <h3>Ruta recomendada</h3>
-          <div class="sidebar-links">
-            <a href="../index.html">Ver todas las guías</a>
-            <a href="../como-escribir-prompts-que-funcionan-formula-simple-con-ejemplos/">Prompts que convierten</a>
-            <a href="../automatizar-tareas-repetitivas-con-ia/">Automatizar tareas</a>
-            <a href="../como-crear-webs-que-vendan-con-ia/">Webs que venden con IA</a>
-          </div>
-        </div>
-
-        <div class="sidebar-box">
-          <h3>Herramientas top</h3>
-          <div class="tool-mini"><div class="tool-icon">S</div><div class="tool-copy"><strong>Systeme.io</strong><span>Captación, embudos y automatización básica.</span></div></div>
-          <div class="tool-mini"><div class="tool-icon">H</div><div class="tool-copy"><strong>Hostinger</strong><span>Webs, dominios y hosting para proyectos digitales.</span></div></div>
-          <div class="tool-mini"><div class="tool-icon">P</div><div class="tool-copy"><strong>Pictory</strong><span>Vídeos con IA a partir de artículos y guiones.</span></div></div>
-          <div class="tool-mini"><div class="tool-icon">A</div><div class="tool-copy"><strong>Amazon</strong><span>Recursos físicos útiles para setup y productividad.</span></div></div>
-        </div>
-
-        <div class="sidebar-box">
-          <h3>CTA principal</h3>
-          <p style="margin-bottom:14px;">Monte páginas, formularios y seguimiento automático sin complicarse.</p>
-          <a href="https://systeme.io/es?sa=sa0265622982c7f37465c7b29f0138ab412c445b08" target="_blank" rel="noopener noreferrer nofollow sponsored" class="btn btn-primary" style="width:100%;">Probar Systeme gratis</a>
-        </div>
-      </aside>
-    </div>
+    <aside class="sidebar">
+      <div class="panel side"><h3>Ruta relacionada</h3><p><a href="/guias/automatizar-tareas-repetitivas-con-ia/">Automatizar tareas repetitivas con IA</a></p><p><a href="/guias/como-crear-webs-que-vendan-con-ia/">Crear webs que vendan con IA</a></p></div>
+      <div class="panel side"><h3>Herramientas</h3><p><a href="https://www.hostinger.com/es?REFERRALCODE=DZOJOSUECS4D" target="_blank" rel="noopener noreferrer nofollow sponsored">Hostinger</a></p><p><a href="https://pictory.ai?ref=joshue-cabello-rosa72" target="_blank" rel="noopener noreferrer nofollow sponsored">Pictory</a></p></div>
+    </aside>
   </main>
 
   <footer class="site-footer">
     <div class="footer-shell">
-      <div class="footer-brand">
-        <div class="footer-mark">IV</div>
-        <p>Guías, herramientas y sistemas para monetizar mejor con inteligencia artificial, automatización y activos digitales.</p>
-      </div>
-
-      <div class="footer-col">
-        <h3>Guías</h3>
-        <a href="../index.html">Biblioteca</a>
-        <a href="../como-escribir-prompts-que-funcionan-formula-simple-con-ejemplos/">Prompts</a>
-        <a href="../automatizar-tareas-repetitivas-con-ia/">Automatización</a>
-        <a href="../como-crear-webs-que-vendan-con-ia/">Webs con IA</a>
-      </div>
-
-      <div class="footer-col">
-        <h3>Herramientas</h3>
-        <a href="https://systeme.io/es?sa=sa0265622982c7f37465c7b29f0138ab412c445b08" target="_blank" rel="noopener noreferrer nofollow sponsored">Systeme.io</a>
-        <a href="https://www.hostinger.com/es?REFERRALCODE=DZOJOSUECS4D" target="_blank" rel="noopener noreferrer nofollow sponsored">Hostinger</a>
-        <a href="https://pictory.ai?ref=joshue-cabello-rosa72" target="_blank" rel="noopener noreferrer nofollow sponsored">Pictory</a>
-        <a href="https://www.amazon.es/?tag=vendeconia-21" target="_blank" rel="noopener noreferrer nofollow sponsored">Amazon</a>
-      </div>
-
-      <div class="footer-col">
-        <h3>Ecosistema</h3>
-        <a href="../../index.html">InfoVendeConIA</a>
-        <a href="https://vendeconia.org/" target="_blank" rel="noopener noreferrer">VendeConIA</a>
-        <a href="https://sistemamaestroia.com/" target="_blank" rel="noopener noreferrer">SistemaMaestroIA</a>
-      </div>
+      <div class="footer-brand"><div class="footer-mark">IV</div><p>Guías y sistemas para escalar negocio digital con IA sin complicaciones.</p></div>
+      <div class="footer-col"><h3>Guías</h3><a href="/guias/">Biblioteca</a><a href="/guias/automatizar-ingresos-online/">Automatizar ingresos</a><a href="/guias/como-usar-chatgpt/">ChatGPT</a></div>
+      <div class="footer-col"><h3>Herramientas</h3><a href="https://systeme.io/es?sa=sa0265622982c7f37465c7b29f0138ab412c445b08" target="_blank" rel="noopener noreferrer">Systeme.io</a><a href="https://www.hostinger.com/es?REFERRALCODE=DZOJOSUECS4D" target="_blank" rel="noopener noreferrer">Hostinger</a></div>
+      <div class="footer-col"><h3>Ecosistema</h3><a href="/index.html">InfoVendeConIA</a><a href="https://vendeconia.org" target="_blank" rel="noopener noreferrer">VendeConIA</a></div>
+      <div class="footer-col"><h3>Legal</h3><a href="/legal/aviso-legal.html">Aviso legal</a><a href="/legal/privacidad.html">Privacidad</a><a href="/legal/cookies.html">Cookies</a></div>
     </div>
   </footer>
 </body>
