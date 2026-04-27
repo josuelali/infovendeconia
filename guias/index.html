@@ -8,26 +8,31 @@
   <link rel="canonical" href="https://infovendeconia.com/guias/">
   <link rel="icon" type="image/png" href="/img/logo-infovendeconia.png">
   <style>
-    :root{--bg:#061418;--line:rgba(255,255,255,.08);--text:#eef7f2;--muted:#bdd1c8;--green:#19c37d;--amber:#e6b85c;--amber2:#f3cd7b;--max:1240px;--shadow:0 18px 55px rgba(0,0,0,.35)}
-    *{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;background:radial-gradient(circle at 10% 10%, rgba(25,195,125,.12), transparent 22%),radial-gradient(circle at 85% 12%, rgba(230,184,92,.10), transparent 22%),linear-gradient(135deg,#061418,#0b2027);color:var(--text);line-height:1.65}
+    :root{--bg:#061418;--line:rgba(255,255,255,.08);--text:#eef7f2;--muted:#bdd1c8;--green:#19c37d;--green2:#4de0a2;--amber:#e6b85c;--amber2:#f3cd7b;--max:1240px;--shadow:0 18px 55px rgba(0,0,0,.35)}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;background:radial-gradient(circle at 10% 10%,rgba(25,195,125,.12),transparent 22%),radial-gradient(circle at 85% 12%,rgba(230,184,92,.10),transparent 22%),linear-gradient(135deg,#061418,#0b2027);color:var(--text);line-height:1.65}
     a{text-decoration:none;color:inherit}
-    .site-header{position:sticky;top:0;background:rgba(6,20,24,.78);border-bottom:1px solid var(--line);backdrop-filter:blur(10px)}
+    .site-header{position:sticky;top:0;background:rgba(6,20,24,.78);border-bottom:1px solid var(--line);backdrop-filter:blur(10px);z-index:20}
     .header-shell{max-width:var(--max);margin:auto;padding:16px 24px;display:flex;justify-content:space-between;align-items:center;gap:16px}
-    .logo{display:flex;align-items:center;gap:12px;font-weight:800}.logo img{width:44px;height:44px;border-radius:12px}
-    .nav{display:flex;gap:14px;flex-wrap:wrap}.nav a{color:var(--muted);font-weight:700}.nav a:hover{color:var(--text)}
-    .hero{max-width:var(--max);margin:auto;padding:40px 24px 16px}
-    .badge{display:inline-flex;padding:8px 12px;border-radius:999px;background:rgba(25,195,125,.10);border:1px solid rgba(25,195,125,.22);color:#4de0a2;font-size:.78rem;font-weight:900;text-transform:uppercase;letter-spacing:.08em}
-    h1{margin:14px 0 10px;font-size:clamp(2rem,4.8vw,4rem);line-height:1.05}
-    .lead{max-width:70ch;color:var(--muted)}
-    .grid{max-width:var(--max);margin:auto;padding:16px 24px 56px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
-    .card{background:linear-gradient(180deg,rgba(12,31,36,.88),rgba(10,24,29,.92));border:1px solid var(--line);border-radius:22px;padding:22px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:10px}
-    .card h2{margin:0;font-size:1.2rem;line-height:1.2}.card p{margin:0;color:var(--muted);font-size:.95rem}.card ul{margin:0;padding-left:18px;color:var(--muted)}
-    .cta{margin-top:auto;display:inline-flex;justify-content:center;align-items:center;min-height:42px;border-radius:12px;font-weight:800;background:linear-gradient(135deg,var(--amber),var(--amber2));color:#1d1607;padding:0 14px}
+    .logo{display:flex;align-items:center;gap:12px;font-weight:800} .logo img{width:44px;height:44px;border-radius:12px}
+    .nav{display:flex;gap:14px;flex-wrap:wrap} .nav a{color:var(--muted);font-weight:700} .nav a:hover{color:var(--text)}
+    .hero{max-width:var(--max);margin:auto;padding:40px 24px 10px;display:grid;gap:16px}
+    .hero-panel{background:linear-gradient(180deg,rgba(12,31,36,.88),rgba(10,24,29,.92));border:1px solid var(--line);border-radius:28px;padding:30px;box-shadow:var(--shadow)}
+    .badge{display:inline-flex;padding:8px 12px;border-radius:999px;background:rgba(25,195,125,.10);border:1px solid rgba(25,195,125,.22);color:var(--green2);font-size:.78rem;font-weight:900;text-transform:uppercase;letter-spacing:.08em}
+    h1{margin:12px 0 10px;font-size:clamp(2rem,4.8vw,4rem);line-height:1.05;max-width:14ch} .lead{max-width:75ch;color:var(--muted);margin:0}
+    .guides-wrap{max-width:var(--max);margin:auto;padding:14px 24px 56px}
+    .guides-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+    .guide-card{background:linear-gradient(180deg,rgba(12,31,36,.88),rgba(10,24,29,.92));border:1px solid var(--line);border-radius:22px;padding:20px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:10px}
+    .guide-card h2{margin:0;font-size:1.08rem;line-height:1.25} .guide-card p{margin:0;color:var(--muted);font-size:.93rem}
+    .guide-meta{display:inline-flex;align-items:center;gap:8px;color:#d6e6df;font-size:.78rem;font-weight:800;text-transform:uppercase;letter-spacing:.05em}
+    .dot{width:8px;height:8px;border-radius:999px;background:var(--green2)}
+    .cta{margin-top:auto;display:inline-flex;justify-content:center;align-items:center;min-height:42px;border-radius:12px;font-weight:800;background:linear-gradient(135deg,var(--amber),var(--amber2));color:#1d1607;padding:0 14px;max-width:max-content}
     .site-footer{border-top:1px solid var(--line);background:rgba(4,14,17,.75)}
     .footer-shell{max-width:var(--max);margin:auto;padding:34px 24px 44px;display:grid;grid-template-columns:1.25fr .85fr .85fr .95fr .85fr;gap:24px}
-    .footer-col,.footer-brand{display:grid;align-content:start;gap:10px}.footer-col h3{margin:0 0 8px}.footer-col a,.footer-brand p{color:var(--muted);font-size:.95rem}
+    .footer-col,.footer-brand{display:grid;align-content:start;gap:10px} .footer-col h3{margin:0 0 8px} .footer-col a,.footer-brand p{color:var(--muted);font-size:.95rem}
     .footer-mark{width:52px;height:52px;border-radius:16px;display:grid;place-items:center;background:linear-gradient(135deg,rgba(25,195,125,.20),rgba(230,184,92,.14));border:1px solid rgba(255,255,255,.08);font-weight:900;color:#4de0a2}
-    @media (max-width:1100px){.grid,.footer-shell{grid-template-columns:1fr}}
+    @media (max-width:1080px){.guides-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.footer-shell{grid-template-columns:1fr}}
+    @media (max-width:760px){.guides-grid{grid-template-columns:1fr}}
   </style>
 </head>
 <body>
@@ -39,50 +44,15 @@
   </header>
 
   <section class="hero">
-    <span class="badge">Biblioteca visual</span>
-    <h1>Guías de IA para crear, automatizar y monetizar</h1>
-    <p class="lead">Elige una ruta según objetivo. Cada guía está estructurada en pasos, bloques de acción y herramientas recomendadas para avanzar más rápido.</p>
+    <div class="hero-panel">
+      <span class="badge">Biblioteca visual</span>
+      <h1>Guías de IA en formato cards para ejecutar más rápido</h1>
+      <p class="lead">Todas las guías publicadas en InfoVendeConIA reunidas en un grid visual. Cada bloque incluye título, breve contexto y acceso directo para entrar a la guía.</p>
+    </div>
   </section>
 
-  <main class="grid">
-    <article class="card">
-      <h2>Automatizar ingresos online</h2>
-      <p>Diseña un sistema simple de captación, contenido y seguimiento con IA.</p>
-      <ul><li>Ruta por fases</li><li>Herramientas concretas</li><li>Checklist de implementación</li></ul>
-      <a class="cta" href="/guias/automatizar-ingresos-online/">Abrir guía</a>
-    </article>
-
-    <article class="card">
-      <h2>Automatizar tareas repetitivas con IA</h2>
-      <p>Reduce tareas manuales y libera tiempo operativo desde la primera semana.</p>
-      <ul><li>Auditoría rápida</li><li>Automatizaciones iniciales</li><li>Errores a evitar</li></ul>
-      <a class="cta" href="/guias/automatizar-tareas-repetitivas-con-ia/">Abrir guía</a>
-    </article>
-
-    <article class="card">
-      <h2>Crear webs que vendan con IA</h2>
-      <p>Estructura una web orientada a conversión con contenido y CTAs optimizados.</p>
-      <ul><li>Arquitectura base</li><li>Bloques de confianza</li><li>Optimización continua</li></ul>
-      <a class="cta" href="/guias/como-crear-webs-que-vendan-con-ia/">Abrir guía</a>
-    </article>
-
-    <article class="card">
-      <h2>Cómo usar ChatGPT</h2>
-      <p>Prompts prácticos para productividad, investigación y generación de contenido.</p>
-      <a class="cta" href="/guias/como-usar-chatgpt/">Ver guía</a>
-    </article>
-
-    <article class="card">
-      <h2>Crear negocio online con IA</h2>
-      <p>Desde idea a validación: oferta, canal y automatización mínima viable.</p>
-      <a class="cta" href="/guias/crear-negocio-online-con-ia/">Ver guía</a>
-    </article>
-
-    <article class="card">
-      <h2>Prompts que funcionan</h2>
-      <p>Fórmulas listas para ejecutar con ejemplos reales y estructura reutilizable.</p>
-      <a class="cta" href="/guias/como-escribir-prompts-que-funcionan-formula-simple-con-ejemplos/">Ver guía</a>
-    </article>
+  <main class="guides-wrap">
+    <section class="guides-grid" id="guides-grid" aria-label="Listado de guías en formato cards"></section>
   </main>
 
   <footer class="site-footer">
@@ -94,5 +64,187 @@
       <div class="footer-col"><h3>Legal</h3><a href="/legal/aviso-legal.html">Aviso legal</a><a href="/legal/privacidad.html">Privacidad</a><a href="/legal/cookies.html">Cookies</a></div>
     </div>
   </footer>
+
+  <script>
+    const guideSlugs = [
+      'analisis-predictivo-con-ia',
+      'aplicaciones-de-ia-en-educacion',
+      'aplicaciones-de-la-vision-por-computadora',
+      'aprendizaje-automatico-vs-aprendizaje-profundido-diferencias',
+      'asistentes-virtuales-inteligentes',
+      'automatizacion-de-procesos-con-ia',
+      'automatizar-embudos-venta',
+      'automatizar-ingresos-online',
+      'automatizar-negocio-digital',
+      'automatizar-negocio-online',
+      'automatizar-tareas-repetitivas',
+      'automatizar-tareas-repetitivas-con-ia',
+      'bateria-externa-calidad-precio',
+      'chatbots-beneficios-y-como-implementarlos',
+      'como-aprender-sobre-ia-recursos-y-cursos-recomendados',
+      'como-aprovechar-la-ia-en-el-teletrabajo',
+      'como-crear-agentes',
+      'como-crear-agentes-de-ia',
+      'como-crear-contenido-con-ia-texto-imagen-y-video-sin-liarte',
+      'como-crear-webs-que-vendan-con-ia',
+      'como-detectar-informacion-falsa-o-inventada-por-ia',
+      'como-escribir-prompts-que-funcionan-formula-simple-con-ejemplos',
+      'como-estudiar-con-ia-sin-copiar-metodo-practico',
+      'como-integrar-ia-en-proyectos-de-automatizacion',
+      'como-la-ia-ayuda-a-la-productividad-personal',
+      'como-la-inteligencia-artificial-esta-transformando-el-marketing-digital',
+      'como-organizar-proyectos-con-ia',
+      'como-usar-chatgpt',
+      'como-usar-chatgpt-paso-a-paso-guia-para-principiantes',
+      'como-usar-ia-para-resumir-textos-largos',
+      'como-utilizar-la-ia-para-analizar-datos-de-clientes',
+      'crear-asistentes-automaticos',
+      'crear-asistentes-automaticos-con-ia',
+      'crear-asistentes-ia',
+      'crear-asistentes-ia-personalizados',
+      'crear-contenido-automatico-con-ia',
+      'crear-contenido-con-chatgpt',
+      'crear-contenido-de-video-automatico',
+      'crear-empresa-con-inteligencia-artificial',
+      'crear-empresa-digital-automatica',
+      'crear-guiones-con-ia',
+      'crear-ingresos-online-con-ia',
+      'crear-negocio-online-con-ia',
+      'crear-negocio-online-con-inteligencia-artificial',
+      'crear-nichos-web-con-ia',
+      'crear-paginas-web-rentables',
+      'crear-proyecto-online-con-inteligencia-artificial',
+      'crear-red-de-agentes-inteligentes',
+      'crear-videos-automaticos-con-inteligencia-artificial',
+      'crear-videos-con-inteligencia-artificial',
+      'crear-videos-para-redes-sociales-automaticamente',
+      'crear-webs-de-nicho-con-inteligencia-artificial',
+      'crear-webs-monetizadas-con-afiliados',
+      'crecer-en-redes-sociales-con-ia',
+      'empresa-automatica-online',
+      'errores-comunes-al-usar-ia-y-como-evitarlos-sin-complicarte',
+      'errores-frecuentes-al-empezar-con-ia',
+      'escribir-articulos-seo-con-chatgpt',
+      'formas-de-ganar-dinero-con-inteligencia-artificial',
+      'gadgets-tecnologia-baratos',
+      'gadgets-tecnologicos-amazon',
+      'ganar-dinero-con-automatizacion',
+      'ganar-dinero-con-chatgpt',
+      'ganar-dinero-con-herramientas-ia',
+      'ganar-dinero-con-ia-desde-casa',
+      'ganar-dinero-con-inteligencia-artificial',
+      'generacion-de-contenido-con-ia-que-debes-saber',
+      'generar-contenido-con-ia',
+      'generar-contenido-seo-automaticamente',
+      'generar-imagenes-con-ia',
+      'generar-posts-automaticos',
+      'generar-trafico-con-ia',
+      'generar-videos-automaticos',
+      'generar-visitas-automaticas',
+      'herramientas-de-ia-para-emprendedores',
+      'herramientas-de-ia-para-pequenas-empresas',
+      'herramientas-de-ia-para-principiantes-que-elegir-segun-tu-objetivo',
+      'herramientas-ia-para-emprendedores',
+      'herramientas-ia-para-productividad',
+      'herramientas-para-crear-videos-automaticos',
+      'ia-en-ecommerce',
+      'ia-en-educacion-ventajas-y-limites',
+      'ia-en-la-atencion-al-cliente',
+      'ia-en-la-educacion-como-mejorar-el-aprendizaje',
+      'ia-en-la-salud-avances-y-retos',
+      'ia-para-ahorrar-tiempo-12-tareas-que-puedes-automatizar-hoy',
+      'ia-para-analisis-de-informacion',
+      'ia-para-analisis-de-mercado',
+      'ia-para-emprendedores',
+      'ia-para-emprendedores-digitales',
+      'ia-para-principiantes-guia-completa',
+      'ia-y-ciberseguridad',
+      'ia-y-creatividad-musica-arte-y-diseno',
+      'ia-y-etica-consideraciones-importantes',
+      'ia-y-privacidad-de-datos',
+      'ia-y-productividad-personal',
+      'ia-y-seguridad-cibernetica-protege-tus-datos',
+      'ideas-de-negocio-con-inteligencia-artificial',
+      'index',
+      'ingresos-pasivos-con-inteligencia-artificial',
+      'inteligencia-artificial-etica-y-responsable',
+      'mejor-herramienta-de-automatizacion-con-ia',
+      'mejores-auriculares-gaming-baratos',
+      'mejores-herramientas-de-automatizacion',
+      'mejores-herramientas-de-inteligencia-artificial',
+      'mejores-herramientas-ia-2026',
+      'mejores-herramientas-para-generar-trafico',
+      'mejores-soportes-para-portatil',
+      'modelos-de-lenguaje-chatgpt-y-mas',
+      'modelos-de-negocio-con-ia',
+      'monetizar-proyectos-con-ia',
+      'negocios-con-inteligencia-artificial',
+      'negocios-digitales-con-inteligencia-artificial',
+      'negocios-rentables-con-inteligencia-artificial',
+      'plataforma-de-asistentes-ia',
+      'plataforma-de-automatizacion-con-ia',
+      'plataformas-ia-para-negocios-online',
+      'plataformas-para-crear-agentes-de-ia',
+      'que-es-la-automatizacion-empresarial-con-ia',
+      'que-es-la-inteligencia-artificial-y-para-que-sirve-explicado-facil',
+      'que-son-los-agentes-de-inteligencia-artificial',
+      'seo-automatico-con-inteligencia-artificial',
+      'seo-programatico-con-inteligencia-artificial',
+      'silla-comoda-para-trabajar-casa',
+      'software-de-automatizacion-con-inteligencia-artificial',
+      'software-para-crear-agentes-ia',
+      'software-para-crear-agentes-inteligentes',
+      'tablet-para-estudiar-barata',
+      'tendencias-en-ia-para-2026',
+      'trabajar-online-con-inteligencia-artificial',
+      'usar-ia-para-ganar-dinero-online',
+      'uso-de-la-ia-para-seo',
+      'utilizando-modelos-de-lenguaje-avanzados-como-gpt-4',
+      'ventajas-y-riesgos-de-la-ia-en-los-negocios',
+      'webs-automaticas-para-afiliados',
+      'webs-que-generan-ingresos-pasivos',
+    ];
+
+    const normalizeWord = (word) => {
+      const map = { ia:'IA', seo:'SEO', gpt:'GPT', chatgpt:'ChatGPT', ecommerce:'eCommerce', web:'Web', webs:'Webs' };
+      return map[word] || word.charAt(0).toUpperCase() + word.slice(1);
+    };
+
+    const slugToTitle = (slug) => slug.split('-').map(normalizeWord).join(' ');
+
+    const buildDescription = (slug) => {
+      if (slug.includes('chatgpt')) return 'Aprende un enfoque práctico para aplicar ChatGPT y obtener resultados útiles en menos tiempo.';
+      if (slug.includes('seo')) return 'Domina una ruta accionable para mejorar posicionamiento y visibilidad con ayuda de IA.';
+      if (slug.includes('negocio') || slug.includes('empresa')) return 'Sigue pasos claros para construir y optimizar un negocio digital apoyado en IA.';
+      if (slug.includes('automat')) return 'Implementa automatizaciones realistas para ahorrar tiempo y escalar procesos sin complicarte.';
+      if (slug.includes('video') || slug.includes('imagenes') || slug.includes('contenido')) return 'Crea contenido de forma más rápida y consistente con estrategias y herramientas de IA.';
+      if (slug.includes('herramientas') || slug.includes('software') || slug.includes('plataforma')) return 'Compara opciones y aplica herramientas de IA según tu objetivo concreto.';
+      return 'Descubre recomendaciones prácticas y pasos accionables para aplicar IA en este tema.';
+    };
+
+    const buildCategory = (slug) => {
+      if (slug.includes('negocio') || slug.includes('empresa') || slug.includes('ingresos')) return 'Negocio';
+      if (slug.includes('automat')) return 'Automatización';
+      if (slug.includes('seo') || slug.includes('trafico') || slug.includes('visitas')) return 'Marketing';
+      if (slug.includes('chatgpt') || slug.includes('prompts')) return 'ChatGPT';
+      if (slug.includes('educacion') || slug.includes('estudiar')) return 'Educación';
+      return 'Guía IA';
+    };
+
+    const grid = document.getElementById('guides-grid');
+    guideSlugs.forEach((slug) => {
+      const href = `/guias/${slug}/`;
+      const title = slugToTitle(slug);
+      const card = document.createElement('article');
+      card.className = 'guide-card';
+      card.innerHTML = `
+        <div class="guide-meta"><span class="dot" aria-hidden="true"></span>${buildCategory(slug)}</div>
+        <h2>${title}</h2>
+        <p>${buildDescription(slug)}</p>
+        <a class="cta" href="${href}">Ver guía</a>
+      `;
+      grid.appendChild(card);
+    });
+  </script>
 </body>
 </html>
