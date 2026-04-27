@@ -8,26 +8,113 @@
   <link rel="canonical" href="https://infovendeconia.com/guias/">
   <link rel="icon" type="image/png" href="/img/logo-infovendeconia.png">
   <style>
-    :root{--bg:#061418;--line:rgba(255,255,255,.08);--text:#eef7f2;--muted:#bdd1c8;--green:#19c37d;--amber:#e6b85c;--amber2:#f3cd7b;--max:1240px;--shadow:0 18px 55px rgba(0,0,0,.35)}
-    *{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;background:radial-gradient(circle at 10% 10%, rgba(25,195,125,.12), transparent 22%),radial-gradient(circle at 85% 12%, rgba(230,184,92,.10), transparent 22%),linear-gradient(135deg,#061418,#0b2027);color:var(--text);line-height:1.65}
+    :root{
+      --bg:#061418;
+      --line:rgba(255,255,255,.08);
+      --text:#eef7f2;
+      --muted:#bdd1c8;
+      --green:#19c37d;
+      --green-2:#4de0a2;
+      --amber:#e6b85c;
+      --amber2:#f3cd7b;
+      --max:1240px;
+      --shadow:0 18px 55px rgba(0,0,0,.35);
+    }
+
+    *{box-sizing:border-box}
+
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;
+      background:
+        radial-gradient(circle at 10% 10%, rgba(25,195,125,.12), transparent 22%),
+        radial-gradient(circle at 85% 12%, rgba(230,184,92,.10), transparent 22%),
+        linear-gradient(135deg,#061418,#0b2027);
+      color:var(--text);
+      line-height:1.65;
+    }
+
     a{text-decoration:none;color:inherit}
-    .site-header{position:sticky;top:0;background:rgba(6,20,24,.78);border-bottom:1px solid var(--line);backdrop-filter:blur(10px)}
+
+    .site-header{
+      position:sticky;
+      top:0;
+      background:rgba(6,20,24,.78);
+      border-bottom:1px solid var(--line);
+      backdrop-filter:blur(10px);
+      z-index:20;
+    }
+
     .header-shell{max-width:var(--max);margin:auto;padding:16px 24px;display:flex;justify-content:space-between;align-items:center;gap:16px}
-    .logo{display:flex;align-items:center;gap:12px;font-weight:800}.logo img{width:44px;height:44px;border-radius:12px}
-    .nav{display:flex;gap:14px;flex-wrap:wrap}.nav a{color:var(--muted);font-weight:700}.nav a:hover{color:var(--text)}
-    .hero{max-width:var(--max);margin:auto;padding:40px 24px 16px}
-    .badge{display:inline-flex;padding:8px 12px;border-radius:999px;background:rgba(25,195,125,.10);border:1px solid rgba(25,195,125,.22);color:#4de0a2;font-size:.78rem;font-weight:900;text-transform:uppercase;letter-spacing:.08em}
-    h1{margin:14px 0 10px;font-size:clamp(2rem,4.8vw,4rem);line-height:1.05}
-    .lead{max-width:70ch;color:var(--muted)}
-    .grid{max-width:var(--max);margin:auto;padding:16px 24px 56px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
-    .card{background:linear-gradient(180deg,rgba(12,31,36,.88),rgba(10,24,29,.92));border:1px solid var(--line);border-radius:22px;padding:22px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:10px}
-    .card h2{margin:0;font-size:1.2rem;line-height:1.2}.card p{margin:0;color:var(--muted);font-size:.95rem}.card ul{margin:0;padding-left:18px;color:var(--muted)}
-    .cta{margin-top:auto;display:inline-flex;justify-content:center;align-items:center;min-height:42px;border-radius:12px;font-weight:800;background:linear-gradient(135deg,var(--amber),var(--amber2));color:#1d1607;padding:0 14px}
+    .logo{display:flex;align-items:center;gap:12px;font-weight:800}
+    .logo img{width:44px;height:44px;border-radius:12px}
+    .nav{display:flex;gap:14px;flex-wrap:wrap}
+    .nav a{color:var(--muted);font-weight:700}
+    .nav a:hover{color:var(--text)}
+
+    .hero{max-width:var(--max);margin:auto;padding:42px 24px 18px;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(280px,.9fr);gap:18px}
+    .hero-panel,
+    .hero-kpis{
+      background:linear-gradient(180deg,rgba(12,31,36,.88),rgba(10,24,29,.92));
+      border:1px solid var(--line);
+      border-radius:28px;
+      box-shadow:var(--shadow);
+      position:relative;
+      overflow:hidden;
+    }
+
+    .hero-panel{padding:30px}
+    .hero-panel::before{
+      content:"";
+      position:absolute;
+      right:-60px;
+      top:-50px;
+      width:180px;
+      height:180px;
+      background:radial-gradient(circle, rgba(230,184,92,.14), transparent 70%);
+    }
+
+    .badge{display:inline-flex;padding:8px 12px;border-radius:999px;background:rgba(25,195,125,.10);border:1px solid rgba(25,195,125,.22);color:var(--green-2);font-size:.78rem;font-weight:900;text-transform:uppercase;letter-spacing:.08em}
+    h1{margin:14px 0 10px;font-size:clamp(2rem,4.8vw,4rem);line-height:1.05;max-width:13ch}
+    .lead{max-width:64ch;color:var(--muted);margin:0}
+
+    .hero-kpis{padding:24px;display:grid;gap:12px;align-content:start}
+    .kpi{padding:14px;border-radius:16px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06)}
+    .kpi strong{display:block;font-size:1.5rem;line-height:1.1;color:var(--green-2)}
+    .kpi span{color:var(--muted);font-size:.92rem}
+
+    .guides-wrap{max-width:var(--max);margin:auto;padding:10px 24px 56px}
+    .guides-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+
+    .guide-card{
+      background:linear-gradient(180deg,rgba(12,31,36,.88),rgba(10,24,29,.92));
+      border:1px solid var(--line);
+      border-radius:24px;
+      padding:24px;
+      box-shadow:var(--shadow);
+      display:grid;
+      gap:14px;
+    }
+
+    .guide-top{display:flex;justify-content:space-between;align-items:flex-start;gap:14px}
+    .guide-top h2{margin:0;font-size:1.34rem;line-height:1.2}
+    .guide-id{display:inline-flex;align-items:center;justify-content:center;min-width:42px;min-height:42px;border-radius:12px;background:rgba(25,195,125,.12);border:1px solid rgba(25,195,125,.24);font-weight:900;color:var(--green-2)}
+    .guide-card p{margin:0;color:var(--muted)}
+
+    .tags{display:flex;flex-wrap:wrap;gap:8px}
+    .tag{display:inline-flex;min-height:32px;align-items:center;padding:0 10px;border-radius:999px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);color:#d6e6df;font-size:.82rem;font-weight:700}
+
+    .cta{display:inline-flex;justify-content:center;align-items:center;min-height:44px;border-radius:12px;font-weight:800;background:linear-gradient(135deg,var(--amber),var(--amber2));color:#1d1607;padding:0 16px;max-width:max-content}
+
     .site-footer{border-top:1px solid var(--line);background:rgba(4,14,17,.75)}
     .footer-shell{max-width:var(--max);margin:auto;padding:34px 24px 44px;display:grid;grid-template-columns:1.25fr .85fr .85fr .95fr .85fr;gap:24px}
     .footer-col,.footer-brand{display:grid;align-content:start;gap:10px}.footer-col h3{margin:0 0 8px}.footer-col a,.footer-brand p{color:var(--muted);font-size:.95rem}
     .footer-mark{width:52px;height:52px;border-radius:16px;display:grid;place-items:center;background:linear-gradient(135deg,rgba(25,195,125,.20),rgba(230,184,92,.14));border:1px solid rgba(255,255,255,.08);font-weight:900;color:#4de0a2}
-    @media (max-width:1100px){.grid,.footer-shell{grid-template-columns:1fr}}
+
+    @media (max-width:1100px){
+      .hero{grid-template-columns:1fr}
+      .guides-grid,.footer-shell{grid-template-columns:1fr}
+    }
   </style>
 </head>
 <body>
@@ -39,50 +126,80 @@
   </header>
 
   <section class="hero">
-    <span class="badge">Biblioteca visual</span>
-    <h1>Guías de IA para crear, automatizar y monetizar</h1>
-    <p class="lead">Elige una ruta según objetivo. Cada guía está estructurada en pasos, bloques de acción y herramientas recomendadas para avanzar más rápido.</p>
+    <div class="hero-panel">
+      <span class="badge">Biblioteca de guías</span>
+      <h1>Elige tu próxima ruta de crecimiento con IA</h1>
+      <p class="lead">Hemos convertido la sección en una experiencia visual para que encuentres más rápido la guía adecuada según tu objetivo: automatizar, vender o producir contenido con inteligencia artificial.</p>
+    </div>
+    <aside class="hero-kpis" aria-label="Resumen de la biblioteca">
+      <div class="kpi"><strong>06</strong><span>rutas destacadas listas para aplicar hoy</span></div>
+      <div class="kpi"><strong>100%</strong><span>enlaces originales conservados</span></div>
+      <div class="kpi"><strong>Estilo</strong><span>oscuro y premium, coherente con la home</span></div>
+    </aside>
   </section>
 
-  <main class="grid">
-    <article class="card">
-      <h2>Automatizar ingresos online</h2>
-      <p>Diseña un sistema simple de captación, contenido y seguimiento con IA.</p>
-      <ul><li>Ruta por fases</li><li>Herramientas concretas</li><li>Checklist de implementación</li></ul>
-      <a class="cta" href="/guias/automatizar-ingresos-online/">Abrir guía</a>
-    </article>
+  <main class="guides-wrap">
+    <section class="guides-grid" aria-label="Guías destacadas">
+      <article class="guide-card">
+        <div class="guide-top">
+          <h2>Automatizar ingresos online</h2>
+          <span class="guide-id">01</span>
+        </div>
+        <p>Diseña un sistema simple de captación, contenido y seguimiento para convertir acciones diarias en un flujo de ingresos más predecible.</p>
+        <div class="tags"><span class="tag">Sistema</span><span class="tag">Captación</span><span class="tag">Escalado</span></div>
+        <a class="cta" href="/guias/automatizar-ingresos-online/">Abrir guía</a>
+      </article>
 
-    <article class="card">
-      <h2>Automatizar tareas repetitivas con IA</h2>
-      <p>Reduce tareas manuales y libera tiempo operativo desde la primera semana.</p>
-      <ul><li>Auditoría rápida</li><li>Automatizaciones iniciales</li><li>Errores a evitar</li></ul>
-      <a class="cta" href="/guias/automatizar-tareas-repetitivas-con-ia/">Abrir guía</a>
-    </article>
+      <article class="guide-card">
+        <div class="guide-top">
+          <h2>Automatizar tareas repetitivas con IA</h2>
+          <span class="guide-id">02</span>
+        </div>
+        <p>Recorta tareas manuales y estructura procesos que se ejecutan de forma consistente sin sacrificar control operativo.</p>
+        <div class="tags"><span class="tag">Productividad</span><span class="tag">Procesos</span><span class="tag">Ahorro de tiempo</span></div>
+        <a class="cta" href="/guias/automatizar-tareas-repetitivas-con-ia/">Abrir guía</a>
+      </article>
 
-    <article class="card">
-      <h2>Crear webs que vendan con IA</h2>
-      <p>Estructura una web orientada a conversión con contenido y CTAs optimizados.</p>
-      <ul><li>Arquitectura base</li><li>Bloques de confianza</li><li>Optimización continua</li></ul>
-      <a class="cta" href="/guias/como-crear-webs-que-vendan-con-ia/">Abrir guía</a>
-    </article>
+      <article class="guide-card">
+        <div class="guide-top">
+          <h2>Crear webs que vendan con IA</h2>
+          <span class="guide-id">03</span>
+        </div>
+        <p>Convierte una web común en un activo comercial con estructura de conversión, mensajes claros y llamadas a la acción eficaces.</p>
+        <div class="tags"><span class="tag">Conversión</span><span class="tag">Web</span><span class="tag">Ventas</span></div>
+        <a class="cta" href="/guias/como-crear-webs-que-vendan-con-ia/">Abrir guía</a>
+      </article>
 
-    <article class="card">
-      <h2>Cómo usar ChatGPT</h2>
-      <p>Prompts prácticos para productividad, investigación y generación de contenido.</p>
-      <a class="cta" href="/guias/como-usar-chatgpt/">Ver guía</a>
-    </article>
+      <article class="guide-card">
+        <div class="guide-top">
+          <h2>Cómo usar ChatGPT</h2>
+          <span class="guide-id">04</span>
+        </div>
+        <p>Aprende una base sólida para usar ChatGPT en tareas de investigación, redacción, síntesis y ejecución diaria.</p>
+        <div class="tags"><span class="tag">Prompts</span><span class="tag">Uso diario</span><span class="tag">ChatGPT</span></div>
+        <a class="cta" href="/guias/como-usar-chatgpt/">Ver guía</a>
+      </article>
 
-    <article class="card">
-      <h2>Crear negocio online con IA</h2>
-      <p>Desde idea a validación: oferta, canal y automatización mínima viable.</p>
-      <a class="cta" href="/guias/crear-negocio-online-con-ia/">Ver guía</a>
-    </article>
+      <article class="guide-card">
+        <div class="guide-top">
+          <h2>Crear negocio online con IA</h2>
+          <span class="guide-id">05</span>
+        </div>
+        <p>Recorre el paso a paso para pasar de idea a oferta validada con procesos automatizados desde el inicio.</p>
+        <div class="tags"><span class="tag">Validación</span><span class="tag">Oferta</span><span class="tag">Negocio digital</span></div>
+        <a class="cta" href="/guias/crear-negocio-online-con-ia/">Ver guía</a>
+      </article>
 
-    <article class="card">
-      <h2>Prompts que funcionan</h2>
-      <p>Fórmulas listas para ejecutar con ejemplos reales y estructura reutilizable.</p>
-      <a class="cta" href="/guias/como-escribir-prompts-que-funcionan-formula-simple-con-ejemplos/">Ver guía</a>
-    </article>
+      <article class="guide-card">
+        <div class="guide-top">
+          <h2>Prompts que funcionan</h2>
+          <span class="guide-id">06</span>
+        </div>
+        <p>Usa plantillas probadas y fórmulas reutilizables para generar respuestas más útiles y accionables desde el primer intento.</p>
+        <div class="tags"><span class="tag">Frameworks</span><span class="tag">Ejemplos</span><span class="tag">Resultados</span></div>
+        <a class="cta" href="/guias/como-escribir-prompts-que-funcionan-formula-simple-con-ejemplos/">Ver guía</a>
+      </article>
+    </section>
   </main>
 
   <footer class="site-footer">
