@@ -12,11 +12,11 @@ Corregir las señales asociadas al rechazo de AdSense por **contenido de poco va
 ## Hallazgos críticos
 1. **Contenido de plantilla e incompleto**
    - Se han detectado páginas con encabezados vacíos (`Sección 4`, `Sección 5`, etc.) y texto genérico intercambiable.
-   - Ejemplo claro previo a corrección: `negocios/ia-en-pequenas-empresas.html`.
+   - Ya se han corregido varios ejemplos directos dentro de `negocios/`.
 
 2. **Placeholders comerciales publicados**
    - Existen referencias heredadas como `amzn.to/tu-codigo`, `shein.top/tu-codigo`, `brevo.com/?affid=tu-codigo` y `appsaccel.com/?aff=tu-codigo`.
-   - Estos bloques aparecen repetidos en páginas informativas, institucionales y legales.
+   - Estos bloques aparecen repetidos en páginas informativas, institucionales y legales del árbol heredado.
 
 3. **Promoción repetitiva en páginas que no la necesitan**
    - Bloques de herramientas y afiliación aparecen en privacidad, cookies, contacto, sobre nosotros y distintos artículos.
@@ -46,6 +46,9 @@ Corregir las señales asociadas al rechazo de AdSense por **contenido de poco va
 - Reescrita `contacto.html`: eliminados bloques promocionales y placeholders.
 - Reescrita `negocios/ia-en-pequenas-empresas.html`: sustituida plantilla incompleta por una guía específica con método, ejemplos, límites y métricas.
 - Reconstruido `negocios/index.html` como índice editorial útil.
+- Reescrita `negocios/automatizacion-sencilla-con-ia.html`: proceso real de entrada/proceso/salida, límites, pruebas y métricas; eliminados placeholders y afiliación heredada.
+- Reescrita `negocios/ia-para-crear-ideas-de-contenido.html`: fuentes reales, priorización, ejemplo, validación y métricas; sin bloques comerciales.
+- Reescrita `negocios/ia-para-atencion-al-cliente-basica.html`: clasificación, borradores, escalado, límites y métricas; sin respuestas automáticas indiscriminadas ni afiliación heredada.
 
 ## Criterio para el resto del trabajo
 Cada página indexable debe aportar:
@@ -58,7 +61,7 @@ Cada página indexable debe aportar:
 - ausencia total de placeholders o secciones vacías.
 
 ## Pendientes prioritarios
-- Auditar y limpiar las páginas con `tu-codigo` y bloques comerciales repetidos.
+- Continuar limpiando las páginas con `tu-codigo` y bloques comerciales repetidos.
 - Revisar las guías de monetización/ingresos por riesgo de contenido genérico o promesas excesivas.
 - Reconstruir `guias/index.html` con una selección editorial clara en lugar de una lista masiva sin jerarquía.
 - Revisar `index.html` para mover herramientas afiliadas y monetización a una posición secundaria.
