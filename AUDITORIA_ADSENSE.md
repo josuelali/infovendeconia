@@ -1,80 +1,92 @@
 # Auditoría AdSense — infovendeconia.com
 
 ## Objetivo
-Corregir las señales asociadas al rechazo de AdSense por **contenido de poco valor** sin eliminar las vías legítimas de monetización del proyecto.
+Corregir las señales más claras asociadas al rechazo de AdSense por **contenido de poco valor** y dejar una versión editorial coherente, navegable y preparada para validación antes de producción.
 
 ## Estado técnico confirmado
-- `ads.txt` existe en el repositorio con el publisher `pub-9789327885520093`.
-- El código de AdSense está presente en distintas páginas.
-- No se ha detectado Sirdata en la búsqueda del repositorio.
-- El trabajo de corrección se realiza en `fix/adsense-value-review-v1`; `main` no se modifica durante la auditoría.
+- Repositorio: `josuelali/infovendeconia`.
+- Rama de trabajo: `fix/adsense-value-review-v1`.
+- `main` no se ha modificado durante la auditoría.
+- `ads.txt` ya existe con el publisher `pub-9789327885520093`.
+- El proyecto Vercel canónico es `infovendeconia` (`prj_luR1iUZrB891rE3i0dQI6iNabKaS`).
+- El Preview de la rama se genera automáticamente y el último despliegue comprobado está `READY`.
 
-## Hallazgos críticos
-1. **Contenido de plantilla e incompleto**
-   - Se han detectado páginas con encabezados vacíos (`Sección 4`, `Sección 5`, etc.) y texto genérico intercambiable.
-   - Ya se han corregido varios ejemplos directos dentro de `negocios/`.
+## Problemas encontrados
+1. Páginas heredadas construidas con texto de plantilla y encabezados genéricos como `Sección 4`, `Sección 5`, etc.
+2. Bloques comerciales repetidos en páginas donde no aportaban valor.
+3. Placeholders publicados (`tu-codigo`) para afiliados inexistentes.
+4. Promoción de herramientas incluso en privacidad, cookies, aviso legal, contacto y sobre nosotros.
+5. Home orientada a monetización y afiliación antes de establecer utilidad editorial.
+6. Índice de guías masivo sin jerarquía editorial.
+7. Índice de negocios que mezclaba páginas revisadas con contenido heredado todavía pendiente de revisión.
+8. Sitemap con centenares de rutas antiguas, inconsistentes o no prioritarias y páginas técnicas como `offline.html`.
+9. Analítica y tracking repetidos directamente en páginas institucionales y legales.
 
-2. **Placeholders comerciales publicados**
-   - Existen referencias heredadas como `amzn.to/tu-codigo`, `shein.top/tu-codigo`, `brevo.com/?affid=tu-codigo` y `appsaccel.com/?aff=tu-codigo`.
-   - Estos bloques aparecen repetidos en páginas informativas, institucionales y legales del árbol heredado.
+## Correcciones completadas
+### Estructura principal
+- `index.html` reescrito como portada editorial: rutas de aprendizaje, método, contenido destacado y transparencia comercial.
+- `guias/index.html` reconstruido como biblioteca curada por temas; eliminada la lista masiva automática de slugs.
+- `negocios/index.html` limitado a contenidos que han pasado la revisión editorial actual.
 
-3. **Promoción repetitiva en páginas que no la necesitan**
-   - Bloques de herramientas y afiliación aparecen en privacidad, cookies, contacto, sobre nosotros y distintos artículos.
-   - Esta mezcla reduce claridad editorial y confianza.
+### Confianza y legales
+- `sobre-nosotros.html` reforzado con propósito, método y transparencia.
+- `politica-editorial.html` creado con criterios de preparación, verificación, actualización, correcciones y afiliación.
+- `contacto.html` simplificado y limpiado de promociones.
+- `legal/privacidad.html` reescrito sin bloques afiliados ni tracking promocional.
+- `legal/cookies.html` actualizado a la configuración actual de analítica/publicidad y consentimiento.
+- `legal/aviso-legal.html` reescrito sin afiliados ni scripts innecesarios.
 
-4. **Analítica duplicada o cargada directamente**
-   - Varias páginas incluyen GA4 inline y lógica de tracking repetida.
-   - Las páginas legales no deberían depender de scripts publicitarios/analíticos para cumplir su función informativa.
+### Guías de negocio reescritas
+- `negocios/ia-en-pequenas-empresas.html`
+- `negocios/automatizacion-sencilla-con-ia.html`
+- `negocios/ia-para-crear-ideas-de-contenido.html`
+- `negocios/ia-para-atencion-al-cliente-basica.html`
 
-5. **Índices débiles o desactualizados**
-   - `negocios/index.html` era una lista mínima con metadatos pobres y solo una parte del contenido real.
-   - `guias/index.html` contiene una biblioteca muy extensa generada desde una lista de slugs y mantiene GA4/tracking inline.
+Estas páginas sustituyen plantillas incompletas por métodos, ejemplos, límites, métricas y reglas de revisión.
 
-6. **Sitemap con señales de mantenimiento deficiente**
-   - Incluye rutas antiguas o inconsistentes (`/privacidad.html`, `/cookies.html`, `/aviso-legal.html`, `offline.html`, rutas `.html` para guías que en el repositorio existen como directorios con `index.html`).
-   - Requiere reconciliación completa antes del reenvío a AdSense.
+### Guías editoriales prioritarias reescritas
+- `guias/como-escribir-prompts-que-funcionan-formula-simple-con-ejemplos/`
+- `guias/como-detectar-informacion-falsa-o-inventada-por-ia/`
+- `guias/errores-comunes-al-usar-ia-y-como-evitarlos-sin-complicarte/`
+- `guias/como-usar-ia-para-resumir-textos-largos/`
+- `guias/como-organizar-proyectos-con-ia/`
+- `guias/ia-para-ahorrar-tiempo-12-tareas-que-puedes-automatizar-hoy/`
+- `guias/como-crear-contenido-con-ia-texto-imagen-y-video-sin-liarte/`
+- `guias/generacion-de-contenido-con-ia-que-debes-saber/`
 
-7. **Home demasiado orientada a monetización**
-   - El hero menciona monetización desde el primer bloque.
-   - Hay una recomendación afiliada prominente de Systeme.io junto al hero.
-   - La sección de herramientas afiliadas aparece antes de que el sitio establezca suficiente valor editorial.
+Se eliminaron de estas páginas los bloques de afiliación dominantes, plantillas genéricas y llamadas comerciales que competían con el contenido.
 
-## Correcciones ya aplicadas en la rama
-- Reescrita `legal/privacidad.html`: eliminados afiliados, placeholders y scripts innecesarios; contenido actualizado a analítica/publicidad actuales.
-- Reescrita `legal/cookies.html`: eliminados afiliados, placeholders y scripts innecesarios; texto actualizado para Google Analytics/AdSense y consentimiento.
-- Reescrita `sobre-nosotros.html`: reforzado propósito, criterio editorial, mantenimiento y transparencia comercial.
-- Reescrita `contacto.html`: eliminados bloques promocionales y placeholders.
-- Reescrita `negocios/ia-en-pequenas-empresas.html`: sustituida plantilla incompleta por una guía específica con método, ejemplos, límites y métricas.
-- Reconstruido `negocios/index.html` como índice editorial útil.
-- Reescrita `negocios/automatizacion-sencilla-con-ia.html`: proceso real de entrada/proceso/salida, límites, pruebas y métricas; eliminados placeholders y afiliación heredada.
-- Reescrita `negocios/ia-para-crear-ideas-de-contenido.html`: fuentes reales, priorización, ejemplo, validación y métricas; sin bloques comerciales.
-- Reescrita `negocios/ia-para-atencion-al-cliente-basica.html`: clasificación, borradores, escalado, límites y métricas; sin respuestas automáticas indiscriminadas ni afiliación heredada.
+### Rastreo e indexación
+- `sitemap.xml` reconstruido desde cero para incluir únicamente portada, hubs, confianza/legal y el conjunto editorial revisado.
+- Eliminadas del sitemap las rutas técnicas, duplicadas, antiguas o todavía no revisadas.
+- `robots.txt` ya permite rastreo general y apunta al sitemap canónico.
+- `vercel.json` añadido para marcar como `noindex, nofollow` páginas técnicas (`app.html`, `offline.html`, `gracias.html`, `estructura.txt`) y redirigir duplicados legales históricos a `/legal/...`.
 
-## Criterio para el resto del trabajo
-Cada página indexable debe aportar:
-- intención concreta;
-- explicación específica;
+## Tratamiento del archivo histórico
+El repositorio conserva muchas páginas antiguas para no destruir contenido sin una decisión específica. Esas páginas no se promocionan desde la navegación principal ni se incluyen en el nuevo sitemap hasta superar una revisión editorial. Esto evita presentar el archivo heredado completo como contenido prioritario durante la revisión de AdSense y conserva la posibilidad de recuperar y mejorar contenidos concretos posteriormente.
+
+## Criterio editorial vigente
+Una página destacada/indexable debe aportar:
+- una intención concreta;
+- explicación específica del problema;
 - proceso, método o criterios aplicables;
 - ejemplos o límites cuando sean relevantes;
+- revisión humana cuando haya riesgo;
 - enlaces internos útiles;
-- monetización secundaria, nunca dominante;
-- ausencia total de placeholders o secciones vacías.
+- monetización secundaria y claramente separada;
+- ausencia de placeholders, secciones vacías y promesas de ingresos garantizados.
 
-## Pendientes prioritarios
-- Continuar limpiando las páginas con `tu-codigo` y bloques comerciales repetidos.
-- Revisar las guías de monetización/ingresos por riesgo de contenido genérico o promesas excesivas.
-- Reconstruir `guias/index.html` con una selección editorial clara en lugar de una lista masiva sin jerarquía.
-- Revisar `index.html` para mover herramientas afiliadas y monetización a una posición secundaria.
-- Revisar `legal/aviso-legal.html` y cualquier duplicado legal en raíz.
-- Reconciliar `sitemap.xml` con rutas reales y eliminar páginas que no deban indexarse (`offline.html`, gracias, app técnica, duplicados legales si procede).
-- Centralizar GA4/AdSense/Consent Mode para evitar implementaciones repetidas e incoherentes.
-- Verificar el Preview de Vercel antes de fusionar a `main`.
+## Validación de Preview
+- Vercel detecta la rama y ha creado Preview automáticamente.
+- Último Preview comprobado tras el bloque final: estado `READY`.
+- La rama está por delante de `main` y no está detrás de producción.
 
-## Condición para reenvío a AdSense
-No solicitar nueva revisión hasta que la versión corregida esté desplegada, rastreable y cumpla simultáneamente:
-1. contenido editorial dominante;
-2. ausencia de plantillas, secciones vacías y placeholders;
-3. afiliación secundaria y claramente separada;
-4. legales coherentes y sin scripts innecesarios;
-5. sitemap y navegación consistentes;
-6. configuración de anuncios/analítica/consentimiento revisada en producción.
+## Antes de solicitar nueva revisión de AdSense
+1. Fusionar únicamente tras revisar visualmente el Preview.
+2. Confirmar que producción despliega el SHA fusionado.
+3. Verificar en producción `/ads.txt`, `/sitemap.xml`, navegación, legales y varias guías revisadas.
+4. Confirmar configuración de mensaje europeo/CMP y Consent Mode en la cuenta de AdSense para `infovendeconia.com`.
+5. No volver a añadir páginas de plantilla, bloques `tu-codigo` ni promoción masiva a los hubs principales.
+
+## Resultado de la auditoría
+La causa editorial más evidente no era falta de número de páginas, sino **exceso de contenido heredado poco específico y monetización repetitiva**. La versión de esta rama cambia el foco a una biblioteca curada, contenido revisado y señales de confianza coherentes. No se puede garantizar la aprobación de AdSense, pero sí se han corregido las señales internas más claras detectadas en el repositorio.
