@@ -1,0 +1,13 @@
+{
+  "headers": [
+    {"source":"/app.html","headers":[{"key":"X-Robots-Tag","value":"noindex, nofollow"}]},
+    {"source":"/offline.html","headers":[{"key":"X-Robots-Tag","value":"noindex, nofollow"}]},
+    {"source":"/gracias.html","headers":[{"key":"X-Robots-Tag","value":"noindex, nofollow"}]},
+    {"source":"/estructura.txt","headers":[{"key":"X-Robots-Tag","value":"noindex, nofollow"}]}
+  ],
+  "redirects": [
+    {"source":"/privacidad.html","destination":"/legal/privacidad.html","permanent":true},
+    {"source":"/cookies.html","destination":"/legal/cookies.html","permanent":true},
+    {"source":"/aviso-legal.html","destination":"/legal/aviso-legal.html","permanent":true}
+  ]
+}
