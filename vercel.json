@@ -822,6 +822,26 @@
       "source": "/negocios/utilizar-ia-para-analizar-la-competencia.html",
       "destination": "/negocios/",
       "permanent": true
+    },
+    {
+      "source": "/guias/uso-de-la-ia-para-seo.html",
+      "destination": "/guias/",
+      "permanent": true
+    },
+    {
+      "source": "/guias/como-utilizar-la-ia-para-analizar-datos-de-clientes.html",
+      "destination": "/guias/",
+      "permanent": true
+    },
+    {
+      "source": "/guias/generacion-de-contenido-con-ia-que-debes-saber.html",
+      "destination": "/guias/",
+      "permanent": true
+    },
+    {
+      "source": "/guias/herramientas-de-ia-para-emprendedores.html",
+      "destination": "/guias/",
+      "permanent": true
     }
   ]
 }
